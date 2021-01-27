@@ -9,6 +9,9 @@
   "bugs": {
     "url": "https://github.com/RedFroggy/company-identifier-validator/issues"
   },
+  "files": [
+    "build/main"
+  ],
   "keywords": [
     "business",
     "company",
