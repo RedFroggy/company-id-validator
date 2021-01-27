@@ -27,6 +27,7 @@
     "build:main": "tsc -p tsconfig.json",
     "build:module": "tsc -p tsconfig.module.json",
     "codecov": "codecov",
+    "semantic-release": "semantic-release",
     "test": "jest --config ./test/jest.config.js",
     "test:ci": "jest --config ./test/jest.config.js --coverage",
     "lint": "eslint src --ext .ts",
