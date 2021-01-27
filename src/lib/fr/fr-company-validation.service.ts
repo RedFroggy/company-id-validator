@@ -42,7 +42,7 @@ export class FrCompanyValidationService extends CompanyValidationService {
    * to validate the numbers.
    */
   private validateSiren(companyId: string): boolean {
-    return LuhnUtils.validate(companyId);
+    return companyId.length === 9 && LuhnUtils.validate(companyId);
   }
 
   /**
@@ -51,6 +51,6 @@ export class FrCompanyValidationService extends CompanyValidationService {
    * and facilities. The Luhn checksum is used to validate the numbers.
    */
   private validateSiret(companyId: string): boolean {
-    return LuhnUtils.validate(companyId);
+    return companyId.length === 14 && LuhnUtils.validate(companyId);
   }
 }

@@ -14,18 +14,21 @@ describe('Andorra company validation', () => {
     // Invalid length
     expect(validationService.validate('A123B')).toBeFalsy();
 
-    // Invalid first digit
+    // Invalid first letter
     expect(validationService.validate("I 706193 G")).toBeFalsy()
 
-    // First digit cannot be a letter
+    // First letter cannot be a digit
     expect(validationService.validate("1-132950-X")).toBeFalsy();
 
-    // If first digit is 'F', middle digits should be > 699999
+    // If first letter is 'F', middle digits should be > 699999
     expect(validationService.validate("F-799999-X")).toBeFalsy();
 
-    // If first digit is 'A' or 'L', middle digits should be
+    // If first letter is 'A' or 'L', middle digits should be
     // 699999 < middleDigits < 800000
     expect(validationService.validate("A-999999-X")).toBeFalsy();
+
+    // First letter should stats with one of the following: ACDEFGLOPU
+    expect(validationService.validate('W-132950-X')).toBeFalsy();
   });
 
   it('should have info', () => {

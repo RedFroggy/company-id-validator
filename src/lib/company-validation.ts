@@ -23,9 +23,6 @@ export class CompanyValidation {
 
   info(): CompanyInfo {
     const validator: CompanyValidationService = getValidator(this.countryCode);
-    if (validator) {
-      return validator.info(this.companyId);
-    }
-    return null;
+    return validator.info(this.companyId);
   }
 }
