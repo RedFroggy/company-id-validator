@@ -1,13 +1,13 @@
 {
-  "name": "company-identifier-validator",
+  "name": "company-id-validator",
   "version": "0.0.0-development",
-  "description": "Validate company identifier for many countries",
+  "description": "A Javascript library to validate company identifiers algorithms for many countries",
   "main": "dist/main/index.js",
   "typings": "dist/main/index.d.ts",
   "module": "dist/module/index.js",
   "author": "Michael Desigaud",
   "bugs": {
-    "url": "https://github.com/RedFroggy/company-identifier-validator/issues"
+    "url": "https://github.com/RedFroggy/company-id-validator/issues"
   },
   "keywords": [
     "business",
@@ -20,7 +20,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RedFroggy/company-identifier-validator.git"
+    "url": "https://github.com/RedFroggy/company-id-validator.git"
   },
   "scripts": {
     "build": "npm run build:main && npm run build:module",
