@@ -1,35 +1,50 @@
 import {CompanyValidation} from './company-validation';
-import {CompanyValidationBuilder} from './company-validation.builder';
 
 describe('Company validation tests', () => {
 
-  const builder: CompanyValidationBuilder = CompanyValidation
-    .builder()
-    .withCountryCode('FR');
-
   it('should validate', () => {
-    expect(builder.withCompanyId('802070748').build()
-      .validate()).toBeTruthy();
+    expect(CompanyValidation.validate('FR', '802070748')).toBeTruthy();
   });
 
-  it('should not validate', () => {
-    expect(builder.withCompanyId('802070749').build()
-      .validate()).toBeFalsy();
-
-    // Should raise exception for an invalid country code
+  it('should not validate if missing company identifier', () => {
     try {
-      builder.withCountryCode('dess').withCompanyId('802070749').build();
+      CompanyValidation.validate('FR', null)
     } catch (error) {
-      expect(error.message).toBe('Not a valid ISO Alpha2 country code');
+      expect(error.message).toBe('The company identifier is mandatory');
+    }
+  });
+
+  it('should not validate if missing country code', () => {
+    try {
+      CompanyValidation.validate(null, '802070749')
+    } catch (error) {
+      expect(error.message).toBe('The country code is mandatory');
+    }
+  });
+
+  it('should not validate if unrecognized country code', () => {
+    expect(CompanyValidation.validate('FR', '802070749')).toBeFalsy();
+
+    try {
+      CompanyValidation.validate('dess', '802070749')
+    } catch (error) {
+      expect(error.message).toBe('Invalid isoAlpha2 country code');
+    }
+  });
+
+  it('should not validate if unsupported country code', () => {
+    expect(CompanyValidation.validate('FR', '802070749')).toBeFalsy();
+
+    try {
+      CompanyValidation.validate('AR', '802070749')
+    } catch (error) {
+      expect(error.message).toBe('Unsupported countryCode: AR');
     }
   });
 
   it('should get info from country code', () => {
 
-    const companyInfo = builder
-      .withCountryCode('FR')
-      .withCompanyId("802070748")
-      .build().info();
+    const companyInfo = CompanyValidation.info('FR', '802070748');
 
     expect(companyInfo).not.toBeNull();
     expect(companyInfo.countryCode).toBe('FR');

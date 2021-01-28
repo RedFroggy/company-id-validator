@@ -1,7 +1,7 @@
 module.exports = {
   preset: 'ts-jest',
   roots: ['src'],
-  coverageDirectory: '<rootDir>/build/test-results/',
+  coverageDirectory: '<rootDir>/dist/test-results/',
   collectCoverageFrom: ['src/lib/**/*.ts', '!src/lib/**/*.spec.ts'],
   coverageThreshold: {
     global: {
