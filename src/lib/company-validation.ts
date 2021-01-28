@@ -7,7 +7,7 @@ import {CompanyValidationService} from './company-validation.service';
 
 export class CompanyValidation {
   static validate(countryCode: string, companyId: string): boolean {
-    const info = this.info(countryCode, companyId);
+    const info = CompanyValidation.info(countryCode, companyId);
     return info && info.valid;
   }
 
@@ -22,7 +22,7 @@ export class CompanyValidation {
       throw new Error('Invalid isoAlpha2 country code');
     }
 
-    return getValidator(countryCode).info(companyId);
+    return CompanyValidation.getValidator(countryCode).info(companyId);
   }
 
   static getValidator(countryCode: string): CompanyValidationService {

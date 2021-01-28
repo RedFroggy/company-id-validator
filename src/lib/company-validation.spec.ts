@@ -52,4 +52,18 @@ describe('Company validation tests', () => {
     expect(companyInfo.trustedSourceUrl).toBeDefined();
     expect(companyInfo.companyIdName).toBe("SIREN");
   });
+
+  it('should get validator based on country code', () => {
+   const validationService = CompanyValidation.getValidator('FR');
+   expect(validationService).not.toBeNull();
+   expect(validationService.countryCode).toBe('FR');
+  });
+
+  it('should not get validator for unsupported country', () => {
+    try {
+      CompanyValidation.validate('AR', '802070749')
+    } catch (error) {
+      expect(error.message).toBe('Unsupported countryCode: AR');
+    }
+  });
 });
