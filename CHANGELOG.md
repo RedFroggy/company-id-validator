@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/RedFroggy/company-id-validator/compare/v1.0.0...v1.0.1) (2021-01-28)
+
+
+### Bug Fixes
+
+* Validation API ([b951701](https://github.com/RedFroggy/company-id-validator/commit/b9517010ad88c7de1e69c641e52cb42fafc53bb1))
+
 # 1.0.0 (2021-01-28)
 
 
