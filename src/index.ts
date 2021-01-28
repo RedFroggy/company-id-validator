@@ -1,2 +1,2 @@
-import './lib/company-validation';
-import './types/company-info.model';
+export { CompanyValidation } from './lib/company-validation';
+export { CompanyInfo } from './types/company-info.model';

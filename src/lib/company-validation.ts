@@ -1,28 +1,37 @@
+import {getCountry} from 'countries-db';
+
 import {CompanyInfo} from "../types/company-info.model";
 
 import {getValidator} from './company-register.util';
-import {CompanyValidationBuilder} from './company-validation.builder';
 import {CompanyValidationService} from './company-validation.service';
 
 export class CompanyValidation {
-  private readonly countryCode: string;
-  private readonly companyId: string;
-  constructor(builder: CompanyValidationBuilder) {
-    this.countryCode = builder.countryCode;
-    this.companyId = builder.companyId;
-  }
-
-  static builder(): CompanyValidationBuilder {
-    return new CompanyValidationBuilder();
-  }
-
-  validate(): boolean {
-    const info = this.info();
+  static validate(countryCode: string, companyId: string): boolean {
+    const info = CompanyValidation.info(countryCode, companyId);
     return info && info.valid;
   }
 
-  info(): CompanyInfo {
-    const validator: CompanyValidationService = getValidator(this.countryCode);
-    return validator.info(this.companyId);
+  static info(countryCode: string, companyId: string): CompanyInfo {
+    if (!countryCode) {
+      throw new Error('The country code is mandatory');
+    }
+    if (!companyId) {
+      throw new Error('The company identifier is mandatory');
+    }
+    if (getCountry(countryCode) == null) {
+      throw new Error('Invalid isoAlpha2 country code');
+    }
+
+    return CompanyValidation.getValidator(countryCode).info(companyId);
+  }
+
+  static getValidator(countryCode: string): CompanyValidationService {
+    const validator: CompanyValidationService = getValidator(countryCode);
+
+    if (!validator) {
+      throw new Error('Unsupported countryCode: ' + countryCode);
+    }
+
+    return validator;
   }
 }
