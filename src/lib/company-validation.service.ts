@@ -10,7 +10,7 @@ import {CompanyInfo} from "../types/company-info.model";
 export abstract class CompanyValidationService {
   private $countryCode: string;
   constructor(countryCode: string) {
-    this.$countryCode = countryCode;
+    this.$countryCode = this.sanitize(countryCode);
   }
   get countryCode(): string {
     return this.$countryCode;
@@ -19,8 +19,12 @@ export abstract class CompanyValidationService {
     const companyInfo = this.info(companyId);
     return companyInfo && companyInfo.valid;
   }
-  sanitize(companyId: string): string {
-    return companyId;
+  sanitize(value: string): string {
+    if (value) {
+      return value.replace(/-/g,'')
+        .trim().toUpperCase();
+    }
+    return null;
   }
   abstract info(companyId: string): CompanyInfo;
 }

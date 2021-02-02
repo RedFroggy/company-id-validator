@@ -15,7 +15,6 @@ export class FrCompanyValidationService extends CompanyValidationService {
     const companyInfo: CompanyInfo = {};
     companyInfo.companyId = companyId;
     companyInfo.countryCode = this.countryCode;
-    companyInfo.trustedSourceUrl = 'https://avis-situation-sirene.insee.fr/'
     companyInfo.valid = false;
 
     const sanitizedCompanyId = this.sanitize(companyId);
@@ -31,6 +30,10 @@ export class FrCompanyValidationService extends CompanyValidationService {
       companyInfo.companyIdDescription = 'Système d\'Identification du Répertoire des Etablissements';
       companyInfo.companyIdName = 'SIRET';
       companyInfo.valid = true;
+    }
+
+    if (companyInfo.valid) {
+      companyInfo.trustedSourceUrl = 'https://avis-situation-sirene.insee.fr/'
     }
 
     return companyInfo;
