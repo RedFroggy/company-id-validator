@@ -21,7 +21,7 @@ export abstract class CompanyValidationService {
   }
   sanitize(value: string): string {
     if (value) {
-      return value.replace(/-/g,'')
+      return value.replace(/-|\s/g,'')
         .trim().toUpperCase();
     }
     return null;
