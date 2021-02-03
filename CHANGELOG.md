@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/RedFroggy/company-id-validator/compare/v1.0.1...v1.0.2) (2021-02-03)
+
+
+### Bug Fixes
+
+* Add trustedUrl only if the identifier is valid ([a3374cb](https://github.com/RedFroggy/company-id-validator/commit/a3374cb2bccb8aff8251ed77595ba1890649457b))
+
 ## [1.0.1](https://github.com/RedFroggy/company-id-validator/compare/v1.0.0...v1.0.1) (2021-01-28)
 
 
