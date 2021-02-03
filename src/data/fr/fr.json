@@ -1,0 +1,16 @@
+[
+  {
+    "companyIdDescription": "Système d'Identification du Répertoire des Entreprises",
+    "companyIdName": "SIREN",
+    "trustedSourceUrl": "https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_entreprises",
+    "pattern": "^\\d{9}$",
+    "parentLevel": true
+  },
+  {
+    "companyIdDescription": "Système d'Identification du Répertoire des Etablissements",
+    "companyIdName": "SIRET",
+    "trustedSourceUrl": "https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements",
+    "pattern": "^\\d{14}$",
+    "parentLevel": false
+  }
+]

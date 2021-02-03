@@ -26,7 +26,7 @@
     "pretty": true /* Stylize errors and messages using color and context. */,
 
     "lib": ["es2017"],
-    "types": ["@types/jasmine"],
+    "types": ["@types/jasmine", "@types/jest"],
     "typeRoots": ["node_modules/@types", "src/types"]
   },
   "include": ["src/**/*.ts"],

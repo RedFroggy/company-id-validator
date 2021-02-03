@@ -44,19 +44,28 @@ describe('Company validation tests', () => {
 
   it('should get info from country code', () => {
 
-    const companyInfo = CompanyValidation.info('FR', '802070748');
+    const companyId = '802070748';
+    const companyInfo = CompanyValidation.info('FR', companyId);
 
     expect(companyInfo).not.toBeNull();
-    expect(companyInfo.countryCode).toBe('FR');
-    expect(companyInfo.valid).toBeTruthy();
-    expect(companyInfo.trustedSourceUrl).toBeDefined();
-    expect(companyInfo.companyIdName).toBe("SIREN");
+    expect(companyInfo).toEqual({
+      companyId,
+      sanitizedCompanyId: companyId,
+      companyIdDescription: jasmine.anything(),
+      countryCode: 'FR',
+      valid: true,
+      trustedSourceUrl: jasmine.anything(),
+      companyIdName: 'SIREN',
+      parentLevel: true,
+      pattern: jasmine.anything(),
+      vatNumber: 'FR89' + companyId
+    });
   });
 
   it('should get validator based on country code', () => {
    const validationService = CompanyValidation.getValidator('FR');
    expect(validationService).not.toBeNull();
-   expect(validationService.countryCode).toBe('FR');
+   expect((validationService as any).countryCode).toBe('FR');
   });
 
   it('should not get validator for unsupported country', () => {

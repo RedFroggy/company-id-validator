@@ -1,4 +1,4 @@
-import {CompanyInfo} from "../../types/company-info.model";
+import {COMPANY_FR_DATA} from "../../data/fr/fr.model";
 import {CompanyValidationService} from "../company-validation.service";
 import {LuhnUtils} from "../utils/luhn.utils";
 
@@ -9,51 +9,23 @@ import {LuhnUtils} from "../utils/luhn.utils";
  */
 export class FrCompanyValidationService extends CompanyValidationService {
   constructor() {
-    super('FR');
-  }
-  info(companyId: string): CompanyInfo {
-    const companyInfo: CompanyInfo = {};
-    companyInfo.companyId = companyId;
-    companyInfo.countryCode = this.countryCode;
-    companyInfo.valid = false;
-
-    const sanitizedCompanyId = this.sanitize(companyId);
-    companyInfo.sanitizedCompanyId = sanitizedCompanyId;
-
-    if (this.validateSiren(sanitizedCompanyId)) {
-      companyInfo.companyIdDescription = 'Système d\'Identification du Répertoire des Entreprises';
-      companyInfo.companyIdName = 'SIREN';
-      companyInfo.valid = true;
-    }
-
-    if (this.validateSiret(sanitizedCompanyId)) {
-      companyInfo.companyIdDescription = 'Système d\'Identification du Répertoire des Etablissements';
-      companyInfo.companyIdName = 'SIRET';
-      companyInfo.valid = true;
-    }
-
-    if (companyInfo.valid) {
-      companyInfo.trustedSourceUrl = 'https://avis-situation-sirene.insee.fr/'
-    }
-
-    return companyInfo;
+    super('FR', COMPANY_FR_DATA);
   }
 
   /**
-   * Company identifier name: SIREN (Système d'Identification du Répertoire des Entreprises)
-   * The SIREN  is a 9 digit number used to identify French companies. The Luhn checksum is used
-   * to validate the numbers.
+   * The Luhn checksum is used to validate SIREN OR SIRET identifiers.
    */
-  private validateSiren(companyId: string): boolean {
-    return companyId.length === 9 && LuhnUtils.validate(companyId);
+  validate(companyId: string): boolean {
+    return LuhnUtils.validate(this.sanitize(companyId));
   }
 
-  /**
-   * Company identifier name: SIRET (Système d'Identification du Répertoire des Etablissements)
-   * The SIRET is a 14 digit number used to identify French companies' establishments
-   * and facilities. The Luhn checksum is used to validate the numbers.
-   */
-  private validateSiret(companyId: string): boolean {
-    return companyId.length === 14 && LuhnUtils.validate(companyId);
+  toVatNumber(companyId: string): string {
+    const vatCompanyId = !this.isParentLevelCompanyId(companyId) ? this.toParentCompanyId(companyId) : companyId;
+    const vatKey = (12 + (3 * (parseInt(vatCompanyId, 10) % 97))) % 97;
+    return `FR${vatKey}${vatCompanyId}`;
+  }
+
+  toParentCompanyId(companyId: string): string {
+    return companyId.substring(0, 9);
   }
 }
