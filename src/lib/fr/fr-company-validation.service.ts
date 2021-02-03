@@ -1,4 +1,5 @@
 import {COMPANY_FR_DATA} from "../../data/fr/fr.model";
+import {CompanyValidator} from "../company-id-validator.decorator";
 import {CompanyValidationService} from "../company-validation.service";
 import {LuhnUtils} from "../utils/luhn.utils";
 
@@ -7,6 +8,7 @@ import {LuhnUtils} from "../utils/luhn.utils";
  * You can use the INSEE webiste to manually validate french company identifiers
  * Please see {@link https://avis-situation-sirene.insee.fr/}
  */
+@CompanyValidator
 export class FrCompanyValidationService extends CompanyValidationService {
   constructor() {
     super('FR', COMPANY_FR_DATA);

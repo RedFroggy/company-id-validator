@@ -8,7 +8,7 @@ import {CompanyInfo} from "../types/company-info.model";
  * company identifier and country code
  */
 export abstract class CompanyValidationService {
-  protected countryCode: string;
+  countryCode: string;
   protected infos: CompanyInfo[];
 
   constructor(countryCode: string, infos: CompanyInfo[]) {
