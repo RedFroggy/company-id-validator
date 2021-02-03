@@ -3,6 +3,9 @@ const glob = require('glob');
 
 listFiles();
 
+/**
+ * List all json files in src/data folder
+ */
 function listFiles() {
   glob("src/data/**/*.json", (err, filesPath) => {
     if (err) {
@@ -15,6 +18,9 @@ function listFiles() {
   });
 }
 
+/**
+ * Read each json file content and add country code info
+ */
 function readFile(filePath) {
   fs.readFile(filePath, 'utf-8', (err, json) => {
     if (err) {
@@ -31,6 +37,9 @@ function readFile(filePath) {
   })
 }
 
+/**
+ * Generate a new typescript file with JSON content
+ */
 function writeFile(filePath, json, countryCode) {
   const tsContent = `import {CompanyInfo} from "../../types/company-info.model";
 
