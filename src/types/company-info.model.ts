@@ -7,7 +7,7 @@ export interface CompanyInfo {
   companyIdDescription?: string;
   // The sanitized local company id used for validation
   sanitizedCompanyId?: string;
-  // Iso alpha2 country code
+  // Iso alpha2 country code of the company
   countryCode?: string;
   // True if the company id is valid in regards of the local algorithm validation
   valid?: boolean;

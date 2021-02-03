@@ -13,13 +13,13 @@ export class AdCompanyValidationService extends CompanyValidationService {
     const companyInfo: CompanyInfo = {};
     companyInfo.countryCode = this.countryCode;
     companyInfo.companyId = companyId;
-    companyInfo.trustedSourceUrl = 'https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/Andorra-TIN.pdf';
     companyInfo.valid = false;
 
     const sanitizedCompanyId = this.sanitize(companyId);
     companyInfo.sanitizedCompanyId = sanitizedCompanyId;
 
     if (this.validateNRT(sanitizedCompanyId)) {
+      companyInfo.trustedSourceUrl = 'https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/Andorra-TIN.pdf';
       companyInfo.companyIdDescription = 'Número de Registre Tributari, Andorra tax number';
       companyInfo.companyIdName = 'NRT';
       companyInfo.valid = true;
@@ -59,9 +59,5 @@ export class AdCompanyValidationService extends CompanyValidationService {
 
     return !('AL'.includes(firstDigit) &&
       !(middleDigits > 699999 && middleDigits < 800000));
-  }
-
-  sanitize(companyId: string): string {
-    return companyId.replace(/-/g,'');
   }
 }
