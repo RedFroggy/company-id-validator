@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/RedFroggy/company-id-validator/compare/v1.2.0...v1.2.1) (2021-02-10)
+
+
+### Bug Fixes
+
+* Add missing validators export  + refacto folder tree ([c9121c6](https://github.com/RedFroggy/company-id-validator/commit/c9121c6050e112911e043cc0be749affeb44924f))
+
 # [1.2.0](https://github.com/RedFroggy/company-id-validator/compare/v1.1.0...v1.2.0) (2021-02-10)
 
 
