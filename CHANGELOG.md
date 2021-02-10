@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/RedFroggy/company-id-validator/compare/v1.2.1...v1.2.2) (2021-02-10)
+
+
+### Bug Fixes
+
+* Wrong validators export ([f4c99ee](https://github.com/RedFroggy/company-id-validator/commit/f4c99ee9fac469b8921368caf8b0a78cbe073c24))
+
 ## [1.2.1](https://github.com/RedFroggy/company-id-validator/compare/v1.2.0...v1.2.1) (2021-02-10)
 
 
