@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/RedFroggy/company-id-validator/compare/v1.0.2...v1.1.0) (2021-02-10)
+
+
+### Bug Fixes
+
+* Add json conf files for company identifiers ([da51b0d](https://github.com/RedFroggy/company-id-validator/commit/da51b0d09f26b588870615ad0f8975e8b2fa0aa4))
+
+
+### Features
+
+* Add belgium company id validation + use decorator to register services ([751cb06](https://github.com/RedFroggy/company-id-validator/commit/751cb06b59caf3c719b6a95c34a5705fae5cb0c3))
+
 ## [1.0.2](https://github.com/RedFroggy/company-id-validator/compare/v1.0.1...v1.0.2) (2021-02-03)
 
 
