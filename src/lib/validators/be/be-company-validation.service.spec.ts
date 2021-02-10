@@ -1,4 +1,4 @@
-import {CompanyInfo} from "../../types/company-info.model";
+import {CompanyInfo} from "../../../types/company-info.model";
 import {BeCompanyValidationService} from "./be-company-validation.service";
 
 describe('Belgium company validation', () => {

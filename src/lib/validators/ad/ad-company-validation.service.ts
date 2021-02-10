@@ -1,6 +1,6 @@
-import {COMPANY_AD_DATA} from "../../data/ad/ad.model";
-import {CompanyValidator} from "../company-id-validator.decorator";
-import {CompanyValidationService} from "../company-validation.service";
+import {COMPANY_AD_DATA} from "../../../data/ad/ad.model";
+import {CompanyValidator} from "../../company-id-validator.decorator";
+import {CompanyValidationService} from "../../company-validation.service";
 
 /**
  * Validate andorra companies identifiers: NRT.

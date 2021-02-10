@@ -1,12 +1,7 @@
 import {CompanyValidation} from './company-validation';
-import {FrCompanyValidationService} from "./fr/fr-company-validation.service";
+import './validators';
 
 describe('Company validation tests', () => {
-
-  beforeEach(() => {
-    CompanyValidation.VALIDATORS['FR'] = new FrCompanyValidationService();
-  });
-
   it('should validate', () => {
     expect(CompanyValidation.validate('FR', '802070748')).toBeTruthy();
   });

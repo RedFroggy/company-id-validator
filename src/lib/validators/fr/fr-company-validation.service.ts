@@ -1,6 +1,6 @@
-import {COMPANY_FR_DATA} from "../../data/fr/fr.model";
-import {CompanyValidator} from "../company-id-validator.decorator";
-import {CompanyValidationService} from "../company-validation.service";
+import {COMPANY_FR_DATA} from "../../../data/fr/fr.model";
+import {CompanyValidator} from "../../company-id-validator.decorator";
+import {CompanyValidationService} from "../../company-validation.service";
 import {LuhnUtils} from "../utils/luhn.utils";
 
 /**

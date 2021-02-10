@@ -1,6 +1,6 @@
-import {COMPANY_CH_DATA} from "../../data/ch/ch.model";
-import {CompanyValidator} from "../company-id-validator.decorator";
-import {CompanyValidationService} from "../company-validation.service";
+import {COMPANY_CH_DATA} from "../../../data/ch/ch.model";
+import {CompanyValidator} from "../../company-id-validator.decorator";
+import {CompanyValidationService} from "../../company-validation.service";
 
 @CompanyValidator
 export class ChCompanyValidationService extends CompanyValidationService {
