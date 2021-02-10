@@ -1,4 +1,4 @@
-import {CompanyInfo} from "../../types/company-info.model";
+import {CompanyInfo} from "../../../types/company-info.model";
 import {ChCompanyValidationService} from "./ch-company-validation.service";
 
 describe('Switzerland company validation', () => {

@@ -1,4 +1,4 @@
-import {CompanyInfo} from "../../types/company-info.model";
+import {CompanyInfo} from "../../../types/company-info.model";
 
 import {AdCompanyValidationService} from "./ad-company-validation.service";
 

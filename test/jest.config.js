@@ -2,7 +2,7 @@ module.exports = {
   preset: 'ts-jest',
   roots: ['src'],
   coverageDirectory: '<rootDir>/dist/test-results/',
-  collectCoverageFrom: ['src/lib/**/*.ts', '!src/lib/**/*.spec.ts'],
+  collectCoverageFrom: ['src/lib/**/*.ts', '!src/lib/**/*.spec.ts', '!src/**/*/index.ts'],
   coverageThreshold: {
     global: {
       statements: 100,
