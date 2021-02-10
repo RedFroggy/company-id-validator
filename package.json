@@ -2,9 +2,8 @@
   "name": "company-id-validator",
   "version": "0.0.0-development",
   "description": "A Javascript library to validate company identifiers algorithms for many countries",
-  "main": "dist/main/index.js",
-  "typings": "dist/main/index.d.ts",
-  "module": "dist/module/index.js",
+  "main": "index.js",
+  "typings": "index.d.ts",
   "author": "Michael Desigaud",
   "bugs": {
     "url": "https://github.com/RedFroggy/company-id-validator/issues"
