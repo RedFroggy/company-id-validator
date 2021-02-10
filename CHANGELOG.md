@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/RedFroggy/company-id-validator/compare/v1.2.2...v1.2.3) (2021-02-10)
+
+
+### Bug Fixes
+
+* Invalid library entry points ([95c5e35](https://github.com/RedFroggy/company-id-validator/commit/95c5e352ec8aff93e2e5384d9ae3b83c365059e9))
+
 ## [1.2.2](https://github.com/RedFroggy/company-id-validator/compare/v1.2.1...v1.2.2) (2021-02-10)
 
 
