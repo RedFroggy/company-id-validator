@@ -1,0 +1,8 @@
+[
+  {
+    "companyIdDescription": "Número de Registre Tributari, Andorra tax number",
+    "companyIdName": "NRT",
+    "trustedSourceUrl": "https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/Andorra-TIN.pdf",
+    "parentLevel": true
+  }
+]

@@ -26,7 +26,7 @@ module.exports = {
   ],
   globals: {
     'ts-jest': {
-      tsConfig: '<rootDir>/tsconfig.json',
+      tsconfig: '<rootDir>/tsconfig.json',
       stringifyContentPathRegex: '\\.html$',
     },
   },

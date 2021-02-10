@@ -1,4 +1,4 @@
-import {CompanyInfo} from "../../types/company-info.model";
+import {COMPANY_AD_DATA} from "../../data/ad/ad.model";
 import {CompanyValidationService} from "../company-validation.service";
 
 /**
@@ -7,25 +7,7 @@ import {CompanyValidationService} from "../company-validation.service";
  */
 export class AdCompanyValidationService extends CompanyValidationService {
   constructor() {
-    super('AD');
-  }
-  info(companyId: string): CompanyInfo {
-    const companyInfo: CompanyInfo = {};
-    companyInfo.countryCode = this.countryCode;
-    companyInfo.companyId = companyId;
-    companyInfo.valid = false;
-
-    const sanitizedCompanyId = this.sanitize(companyId);
-    companyInfo.sanitizedCompanyId = sanitizedCompanyId;
-
-    if (this.validateNRT(sanitizedCompanyId)) {
-      companyInfo.trustedSourceUrl = 'https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/Andorra-TIN.pdf';
-      companyInfo.companyIdDescription = 'Número de Registre Tributari, Andorra tax number';
-      companyInfo.companyIdName = 'NRT';
-      companyInfo.valid = true;
-    }
-
-    return companyInfo;
+    super('AD', COMPANY_AD_DATA);
   }
 
   /**
@@ -34,7 +16,7 @@ export class AdCompanyValidationService extends CompanyValidationService {
    * This number consists of one letter indicating the type of entity, then 6
    * digits, followed by a check letter.
    */
-  private validateNRT(companyId: string): boolean {
+  public validate(companyId: string): boolean {
     const sanitizedCompanyId = this.sanitize(companyId);
     const companyIdParts: string[] = sanitizedCompanyId.split("");
     if (companyIdParts.length != 8) {
@@ -59,5 +41,13 @@ export class AdCompanyValidationService extends CompanyValidationService {
 
     return !('AL'.includes(firstDigit) &&
       !(middleDigits > 699999 && middleDigits < 800000));
+  }
+
+  toVatNumber() {
+    return null;
+  }
+
+  toParentCompanyId(companyId: string): string {
+    return companyId;
   }
 }
