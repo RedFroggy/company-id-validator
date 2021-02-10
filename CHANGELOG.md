@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/RedFroggy/company-id-validator/compare/v1.1.0...v1.2.0) (2021-02-10)
+
+
+### Features
+
+* Add switzerland UID validation ([f405f03](https://github.com/RedFroggy/company-id-validator/commit/f405f03be43ed3d41c837f431ed672d26ddebb9a))
+
 # [1.1.0](https://github.com/RedFroggy/company-id-validator/compare/v1.0.2...v1.1.0) (2021-02-10)
 
 
