@@ -37,12 +37,7 @@ export class ChCompanyValidationService extends CompanyValidationService {
       total += digitsParts[i] * weights[i];
     }
 
-    const reminder = total % 11;
-    let expectedDigit = 0;
-    if (reminder !== 0) {
-      expectedDigit = 11 - reminder;
-    }
-
+    const expectedDigit = 11 - (total % 11);
     return expectedDigit === digitsParts[digitsParts.length -1];
   }
 
