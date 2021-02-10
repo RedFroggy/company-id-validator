@@ -2,10 +2,10 @@ import {getCountry} from 'countries-db';
 
 import {CompanyInfo} from "../types/company-info.model";
 
-import {getValidator} from './company-register.util';
 import {CompanyValidationService} from './company-validation.service';
 
 export class CompanyValidation {
+  static VALIDATORS: {isoAlpha2countryCode: string, instance: CompanyValidationService}[] = [];
   static validate(countryCode: string, companyId: string): boolean {
     const info = CompanyValidation.info(countryCode, companyId);
     return info && info.valid;
@@ -26,7 +26,7 @@ export class CompanyValidation {
   }
 
   static getValidator(countryCode: string): CompanyValidationService {
-    const validator: CompanyValidationService = getValidator(countryCode);
+    const validator: CompanyValidationService = CompanyValidation.VALIDATORS[countryCode];
 
     if (!validator) {
       throw new Error('Unsupported countryCode: ' + countryCode);
