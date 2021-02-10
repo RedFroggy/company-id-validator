@@ -12,7 +12,7 @@
   <a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/made-with-javascript.svg"/></a>
 </div>
 <div align="center">
-  <a href="https://travis-ci.org/RedFroggy/company-id-validator"><img src="https://travis-ci.org/RedFroggy/company-id-validator.svg?branch=master"/></a>
+  <a href="https://circleci.com/gh/RedFroggy/company-id-validator"><img src="https://circleci.com/gh/RedFroggy/company-id-validator.svg?style=svg"/></a>
    <a href="https://codecov.io/gh/RedFroggy/company-id-validator"><img src="https://codecov.io/gh/RedFroggy/company-id-validator/branch/master/graph/badge.svg?token=XM9R6ZV9SJ"/></a>
    <a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg"/></a>
 </div>
@@ -23,7 +23,7 @@ It's inspired from this awesome [ptdnum python library](https://github.com/arthu
 
 ## Why ?
 - Each country has its own company/business identifier and their name and validation algorithms are very specific from one country to another.
-- It is very difficult to gather information about local identifiers:
+- It is very difficult to gather information about local company identifiers:
   **For example, do you know the name of the chinese company identifier ? it's format ? How to validate it ?**
 - That's the purpose of this library
 
