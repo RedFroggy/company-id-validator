@@ -65,7 +65,7 @@ CompanyValidation.info('FR', '802070748');
 
 ## Code quality
 
-`npm run lint`. It will both check angular code and file naming conventions.
+`npm run lint`. Will check your code based on `tslint.json` config file
 
 ## Roadmap
 - For now only 4 countries are supported: FR, BE, CH, AD
