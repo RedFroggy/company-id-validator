@@ -37,13 +37,13 @@ You can find a [demo here](https://stackblitz.com/edit/angular-ivy-vh4hea)
 - You can now validate a company identifier based on its country code:
 
 ```javascript
-import {CompanyValidation} from "./company-validation";
+import { CompanyValidation } from 'company-id-validator';
 
 CompanyValidation.validate('FR', '802070748'); // Should return true
 ```
 - You can also get detailed information:
 ```javascript
-import {CompanyValidation} from "./company-validation";
+import { CompanyValidation } from 'company-id-validator';
 
 CompanyValidation.info('FR', '802070748');
 
