@@ -9,14 +9,6 @@ export class ChCompanyValidationService extends CompanyValidationService {
     super('CH', COMPANY_CH_DATA);
   }
 
-  toParentCompanyId(companyId: string): string {
-    return companyId;
-  }
-
-  toVatNumber() {
-    return null;
-  }
-
   validate(companyId: string): boolean {
     const sanitizedCompanyId = this.sanitize(companyId);
 

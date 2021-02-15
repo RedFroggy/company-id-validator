@@ -23,8 +23,4 @@ describe('Switzerland company validation', () => {
     const info:CompanyInfo = validationService.info('CHE100155212');
     expect(info).not.toBeNull();
   });
-
-  it('should return parent company id', () => {
-    expect(validationService.toParentCompanyId('CHE100155212')).toBe('CHE100155212');
-  })
 });

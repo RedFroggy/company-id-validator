@@ -79,12 +79,16 @@ export abstract class CompanyValidationService {
       && new RegExp(info.pattern).test(companyId));
   }
 
-  abstract toParentCompanyId(companyId: string): string;
+  protected toParentCompanyId(companyId: string): string {
+    return  null;
+  }
 
   /**
    * Locally convert a company identifier to a VAT number
    */
-  abstract toVatNumber(companyId?: string);
+  protected toVatNumber(companyId?: string) {
+    return null;
+  }
 
   /**
    * Validate the given {@see companyId}

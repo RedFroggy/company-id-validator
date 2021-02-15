@@ -35,8 +35,4 @@ describe('Andorra company validation', () => {
     const info:CompanyInfo = validationService.info('U-132950-X');
     expect(info).not.toBeNull();
   });
-
-  it('should return parent company id', () => {
-    expect(validationService.toParentCompanyId('U-132950-X')).toBe('U-132950-X');
-  })
 });

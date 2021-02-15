@@ -44,12 +44,4 @@ export class AdCompanyValidationService extends CompanyValidationService {
     return !('AL'.includes(firstDigit) &&
       !(middleDigits > 699999 && middleDigits < 800000));
   }
-
-  toVatNumber() {
-    return null;
-  }
-
-  toParentCompanyId(companyId: string): string {
-    return companyId;
-  }
 }

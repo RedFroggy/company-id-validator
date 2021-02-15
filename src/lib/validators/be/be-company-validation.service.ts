@@ -24,14 +24,6 @@ export class BeCompanyValidationService extends CompanyValidationService {
     return checksum === 0;
   }
 
-  toVatNumber() {
-    return null;
-  }
-
-  toParentCompanyId(companyId:string): string {
-    return companyId;
-  }
-
   private cleanNumber(companyId: string): string {
     const cleanedCompanyId = companyId
       .replace(this.countryCode, '')

@@ -7,14 +7,6 @@ class DefaultCompanyValidationService extends CompanyValidationService {
   validate(companyId: string): boolean {
     return Boolean(companyId);
   }
-
-  toVatNumber(companyId?: string) {
-    return companyId;
-  }
-
-  toParentCompanyId(companyId: string): string {
-    return companyId;
-  }
 }
 
 describe('CompanyValidationService tests', () => {
@@ -67,6 +59,11 @@ describe('CompanyValidationService tests', () => {
   it('should validate child company id', () => {
     expect(validationService).not.toBeNull();
     expect(validationService.info('80207074800016').valid).toBeTruthy();
+    expect((validationService as any).toParentCompanyId('80207074800016')).toBeNull();
+  });
+
+  it('should get VAT number', () => {
+    expect((validationService as any).toVatNumber('80207074800016')).toBeNull();
   });
 
 });
