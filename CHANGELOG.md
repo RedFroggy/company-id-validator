@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/RedFroggy/company-id-validator/compare/v1.2.3...v1.3.0) (2021-02-17)
+
+
+### Features
+
+* Add chinese USCC validation ([4c1011e](https://github.com/RedFroggy/company-id-validator/commit/4c1011e780b42fe4fa1864c1b83e147fcacde904))
+
 ## [1.2.3](https://github.com/RedFroggy/company-id-validator/compare/v1.2.2...v1.2.3) (2021-02-10)
 
 
