@@ -22,4 +22,8 @@ describe('Belgium company validation', () => {
     const info:CompanyInfo = validationService.info('BE403019261');
     expect(info).not.toBeNull();
   });
+
+  it('should calculate ondernemingsnummer from VAT number', () => {
+    expect((validationService as any).vatNumberToCompanyId("BE428759497")).toBe("428759497");
+  });
 });

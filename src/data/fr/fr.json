@@ -12,5 +12,13 @@
     "trustedSourceUrl": "https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements",
     "pattern": "^\\d{14}$",
     "parentLevel": false
+  },
+  {
+    "companyIdDescription": "Numéro de TVA intracommunautaire",
+    "companyIdName": "VAT",
+    "trustedSourceUrl": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F23570",
+    "pattern": "^FR\\d{9}$",
+    "parentLevel": true,
+    "countryCode": "FR"
   }
 ]

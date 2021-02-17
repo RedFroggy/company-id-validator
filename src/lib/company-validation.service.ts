@@ -21,14 +21,14 @@ export abstract class CompanyValidationService {
    * If there is more than one identifier defined for one country the
    * {@see CompanyInfo#pattern} property is used to determine which one to use.
    */
-  info(companyId: string): CompanyInfo {
-    // Sanitize company identifier
-    const sanitizedCompanyId = this.sanitize(companyId);
+  info(query: string): CompanyInfo {
+    // Sanitize query
+    const sanitizedQuery = this.sanitize(query);
 
     let companyInfo: CompanyInfo = {};
     companyInfo.valid = false;
-    companyInfo.companyId = companyId;
-    companyInfo.sanitizedCompanyId = sanitizedCompanyId;
+    companyInfo.query = query;
+    companyInfo.sanitizedQuery = sanitizedQuery;
 
     if (this.infos) {
 
@@ -39,20 +39,28 @@ export abstract class CompanyValidationService {
         // If multiple identifiers, we use regular expressions
         // in {@see CompanyInfo#pattern} to find the one that matches the most
         const matchCompanyInfo = this.infos.find((d) => d.pattern
-          && new RegExp(d.pattern).test(sanitizedCompanyId));
+          && new RegExp(d.pattern).test(sanitizedQuery));
 
         if (matchCompanyInfo) {
           companyInfo = Object.assign({}, companyInfo, matchCompanyInfo);
         }
       }
 
-      const validCompanyId = this.validate(companyId);
+      const validCompanyId = this.validate(sanitizedQuery);
 
       if (validCompanyId) {
-        if (!companyInfo.parentLevel) {
-          companyInfo.parentCompanyId = this.toParentCompanyId(sanitizedCompanyId);
+
+        if (companyInfo.companyIdName === 'VAT') {
+          companyInfo.vatNumber = sanitizedQuery;
+          companyInfo.companyId = this.vatNumberToCompanyId(sanitizedQuery);
+        } else {
+          companyInfo.companyId = sanitizedQuery;
+          companyInfo.vatNumber = this.companyIdToVATNumber(sanitizedQuery);
         }
-        companyInfo.vatNumber = this.toVatNumber(sanitizedCompanyId);
+
+        if (!companyInfo.parentLevel) {
+          companyInfo.parentCompanyId = this.toParentCompanyId(sanitizedQuery);
+        }
 
         // Indicate if the identifier is locally valid
         companyInfo.valid = true;
@@ -86,7 +94,14 @@ export abstract class CompanyValidationService {
   /**
    * Locally convert a company identifier to a VAT number
    */
-  protected toVatNumber(companyId?: string) {
+  protected companyIdToVATNumber(companyId?: string): string {
+    return null;
+  }
+
+  /**
+   * Locally convert a VAT number to a company identifier
+   */
+  protected vatNumberToCompanyId(vatNumber?: string): string {
     return null;
   }
 

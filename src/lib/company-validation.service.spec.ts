@@ -7,6 +7,16 @@ class DefaultCompanyValidationService extends CompanyValidationService {
   validate(companyId: string): boolean {
     return Boolean(companyId);
   }
+
+  protected companyIdToVATNumber(companyId?: string): string {
+    super.companyIdToVATNumber(companyId);
+    return this.countryCode + companyId;
+  }
+
+  protected vatNumberToCompanyId(vatNumber?: string): string {
+    super.vatNumberToCompanyId(vatNumber);
+    return vatNumber.substring(2);
+  }
 }
 
 describe('CompanyValidationService tests', () => {
@@ -30,17 +40,17 @@ describe('CompanyValidationService tests', () => {
   it('should not validate if no country info', () => {
     validationService = new DefaultCompanyValidationService('fr', null);
     expect(validationService.info('802070748')).toEqual({
-      companyId: '802070748',
+      query: '802070748',
       valid: false,
-      sanitizedCompanyId: '802070748'
+      sanitizedQuery: '802070748'
     });
 
     validationService = new DefaultCompanyValidationService('FR', COMPANY_FR_DATA);
     jest.spyOn(validationService, 'validate').mockReturnValue(false);
     expect(validationService.info('802070748099')).toEqual({
-      companyId: '802070748099',
+      query: '802070748099',
       valid: false,
-      sanitizedCompanyId: '802070748099'
+      sanitizedQuery: '802070748099'
     });
   });
 
@@ -53,7 +63,36 @@ describe('CompanyValidationService tests', () => {
 
   it('should validate parent company id', () => {
     expect(validationService).not.toBeNull();
-    expect(validationService.info('802070748').valid).toBeTruthy();
+    expect(validationService.info('802070748')).toEqual({
+      companyId: '802070748',
+      companyIdName: 'SIREN',
+      companyIdDescription: jasmine.anything(),
+      trustedSourceUrl: jasmine.anything(),
+      parentLevel: true,
+      pattern: jasmine.anything(),
+      countryCode: 'FR',
+      query: '802070748',
+      valid: true,
+      sanitizedQuery: '802070748',
+      vatNumber: 'FR802070748'
+    });
+  });
+
+  it('should validate VAT number', () => {
+    expect(validationService).not.toBeNull();
+    expect(validationService.info('FR802070748')).toEqual({
+      companyId: '802070748',
+      companyIdName: 'VAT',
+      companyIdDescription: jasmine.anything(),
+      trustedSourceUrl: jasmine.anything(),
+      parentLevel: true,
+      pattern: jasmine.anything(),
+      countryCode: 'FR',
+      query: 'FR802070748',
+      valid: true,
+      sanitizedQuery: 'FR802070748',
+      vatNumber: 'FR802070748'
+    });
   });
 
   it('should validate child company id', () => {
@@ -63,7 +102,7 @@ describe('CompanyValidationService tests', () => {
   });
 
   it('should get VAT number', () => {
-    expect((validationService as any).toVatNumber('80207074800016')).toBeNull();
+    expect((validationService as any).companyIdToVATNumber('802070748')).toBe('FR802070748');
   });
 
 });
