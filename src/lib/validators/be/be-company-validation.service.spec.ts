@@ -22,8 +22,4 @@ describe('Belgium company validation', () => {
     const info:CompanyInfo = validationService.info('BE403019261');
     expect(info).not.toBeNull();
   });
-
-  it('should return parent company id', () => {
-    expect(validationService.toParentCompanyId('BE403019261')).toBe('BE403019261');
-  })
 });
