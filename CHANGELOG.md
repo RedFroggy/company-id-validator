@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/RedFroggy/company-id-validator/compare/v1.3.0...v1.4.0) (2021-02-24)
+
+
+### Features
+
+* Convert company id to vat number ([87d955d](https://github.com/RedFroggy/company-id-validator/commit/87d955dce73a6af7e1f00ccc4afd09895cbbb801))
+
 # [1.3.0](https://github.com/RedFroggy/company-id-validator/compare/v1.2.3...v1.3.0) (2021-02-17)
 
 
