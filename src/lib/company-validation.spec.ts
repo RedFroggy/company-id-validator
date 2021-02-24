@@ -49,8 +49,9 @@ describe('Company validation tests', () => {
 
     expect(companyInfo).not.toBeNull();
     expect(companyInfo).toEqual({
+      query: companyId,
       companyId,
-      sanitizedCompanyId: companyId,
+      sanitizedQuery: companyId,
       companyIdDescription: jasmine.anything(),
       countryCode: 'FR',
       valid: true,

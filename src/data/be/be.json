@@ -1,7 +1,14 @@
 [
   {
-    "companyIdDescription": "BTW, TVA, NWSt, ondernemingsnummer (Belgian enterprise number)",
+    "companyIdDescription": "ondernemingsnummer (Belgian enterprise number)",
     "companyIdName": "ondernemingsnummer",
+    "pattern": "^\\d{10}$",
+    "parentLevel": true
+  },
+  {
+    "companyIdDescription": "VAT number",
+    "companyIdName": "VAT",
+    "pattern": "^BE\\d{10}$",
     "parentLevel": true
   }
 ]

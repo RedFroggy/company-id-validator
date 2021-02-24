@@ -21,10 +21,14 @@ export class FrCompanyValidationService extends CompanyValidationService {
     return LuhnUtils.validate(this.sanitize(companyId));
   }
 
-  toVatNumber(companyId: string): string {
+  companyIdToVATNumber(companyId: string): string {
     const vatCompanyId = !this.isParentLevelCompanyId(companyId) ? this.toParentCompanyId(companyId) : companyId;
     const vatKey = (12 + (3 * (parseInt(vatCompanyId, 10) % 97))) % 97;
     return `FR${vatKey}${vatCompanyId}`;
+  }
+
+  vatNumberToCompanyId(vatNumber?: string): string {
+    return vatNumber.substring(2);
   }
 
   toParentCompanyId(companyId: string): string {

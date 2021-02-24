@@ -35,4 +35,8 @@ export class BeCompanyValidationService extends CompanyValidationService {
 
     return cleanedCompanyId;
   }
+
+  protected vatNumberToCompanyId(vatNumber?: string): string {
+    return vatNumber.substring(2);
+  }
 }

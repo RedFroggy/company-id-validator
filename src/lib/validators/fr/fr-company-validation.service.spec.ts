@@ -15,7 +15,11 @@ describe('French company validation', () => {
   });
 
   it('should calculate VAT from siren or siret', () => {
-    expect(validationService.toVatNumber("802070748")).toBe("FR89802070748");
-    expect(validationService.toVatNumber("80207074800016")).toBe("FR89802070748");
+    expect(validationService.companyIdToVATNumber("802070748")).toBe("FR89802070748");
+    expect(validationService.companyIdToVATNumber("80207074800016")).toBe("FR89802070748");
+  });
+
+  it('should calculate siren from VAT number', () => {
+    expect(validationService.vatNumberToCompanyId("FR802070748")).toBe("802070748");
   });
 });
