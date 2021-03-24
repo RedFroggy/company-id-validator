@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/RedFroggy/company-id-validator/compare/v1.4.0...v1.5.0) (2021-03-24)
+
+
+### Features
+
+* Add italia partita vat number support ([046971b](https://github.com/RedFroggy/company-id-validator/commit/046971b1bf170a9c77728c85fc4a7bf3cbbe777a))
+
 # [1.4.0](https://github.com/RedFroggy/company-id-validator/compare/v1.3.0...v1.4.0) (2021-02-24)
 
 
