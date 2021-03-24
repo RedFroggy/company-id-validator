@@ -45,7 +45,7 @@ CompanyValidation.validate('FR', '802070748'); // Should return true
 ```javascript
 import { CompanyValidation } from 'company-id-validator';
 
-const infp = CompanyValidation.info('FR', '802070748');
+const info = CompanyValidation.info('FR', '802070748');
 console.log(info);
 ```
 ```json
