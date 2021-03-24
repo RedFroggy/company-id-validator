@@ -45,9 +45,23 @@ CompanyValidation.validate('FR', '802070748'); // Should return true
 ```javascript
 import { CompanyValidation } from 'company-id-validator';
 
-CompanyValidation.info('FR', '802070748');
-
-
+const info = CompanyValidation.info('FR', '802070748');
+console.log(info);
+```
+```json
+{
+  "valid": true,
+  "query": "802070748",
+  "sanitizedQuery": "802070748",
+  "companyIdDescription": "Système d'Identification du Répertoire des Entreprises",
+  "companyIdName": "SIREN",
+  "trustedSourceUrl": "https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_entreprises",
+  "pattern": "^\\d{9}$",
+  "parentLevel": true,
+  "countryCode": "FR",
+  "companyId": "802070748",
+  "vatNumber": "FR89802070748"
+}
 ```
 
 ## Getting started
@@ -68,5 +82,5 @@ CompanyValidation.info('FR', '802070748');
 `npm run lint`. Will check your code based on `tslint.json` config file
 
 ## Roadmap
-- For now only 4 countries are supported: FR, BE, CH, AD
+- For now only 4 countries are supported: FR, BE, CH, AD, CN, IT
 - Need to add many more countries based on the [ptdnum python library](https://github.com/arthurdejong/python-stdnum)
