@@ -1,10 +1,10 @@
 import {CompanyInfo} from "../../../types/company-info.model";
-import {ItCompanyValidationService} from "./it-company-validation.service";
+import {ItCompanyIdService} from "./it-company-id.service";
 
 
 describe('French company validation', () => {
 
-  const validationService = new ItCompanyValidationService();
+  const validationService = new ItCompanyIdService();
 
   it('should validate Partita IVA', () => {
     expect(validationService.validate("00743110157")).toBeTruthy();

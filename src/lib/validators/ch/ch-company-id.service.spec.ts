@@ -1,9 +1,9 @@
 import {CompanyInfo} from "../../../types/company-info.model";
-import {ChCompanyValidationService} from "./ch-company-validation.service";
+import {ChCompanyIdService} from "./ch-company-id.service";
 
 describe('Switzerland company validation', () => {
 
-  const validationService = new ChCompanyValidationService();
+  const validationService = new ChCompanyIdService();
 
   it('should validate swiss UID', () => {
     expect(validationService.validate('CHE100155212')).toBeTruthy();

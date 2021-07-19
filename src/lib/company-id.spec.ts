@@ -1,14 +1,14 @@
-import {CompanyValidation} from './company-validation';
+import {CompanyId} from './company-id';
 import './validators';
 
 describe('Company validation tests', () => {
   it('should validate', () => {
-    expect(CompanyValidation.validate('FR', '802070748')).toBeTruthy();
+    expect(CompanyId.validate('FR', '802070748')).toBeTruthy();
   });
 
   it('should not validate if missing company identifier', () => {
     try {
-      CompanyValidation.validate('FR', null)
+      CompanyId.validate('FR', null)
     } catch (error) {
       expect(error.message).toBe('The company identifier is mandatory');
     }
@@ -16,36 +16,40 @@ describe('Company validation tests', () => {
 
   it('should not validate if missing country code', () => {
     try {
-      CompanyValidation.validate(null, '802070749')
+      CompanyId.validate(null, '802070749')
     } catch (error) {
       expect(error.message).toBe('The country code is mandatory');
     }
   });
 
   it('should not validate if unrecognized country code', () => {
-    expect(CompanyValidation.validate('FR', '802070749')).toBeFalsy();
+    expect(CompanyId.validate('FR', '802070749')).toBeFalsy();
 
     try {
-      CompanyValidation.validate('dess', '802070749')
+      CompanyId.validate('dess', '802070749')
     } catch (error) {
       expect(error.message).toBe('Invalid isoAlpha2 country code');
     }
   });
 
   it('should not validate if unsupported country code', () => {
-    expect(CompanyValidation.validate('FR', '802070749')).toBeFalsy();
+    expect(CompanyId.validate('FR', '802070749')).toBeFalsy();
 
     try {
-      CompanyValidation.validate('AR', '802070749')
+      CompanyId.validate('AR', '802070749')
     } catch (error) {
       expect(error.message).toBe('Unsupported countryCode: AR');
     }
   });
 
+  it('should not validate if with invalid company id format', () => {
+    expect(CompanyId.validate('FR', '8020707488')).toBeFalsy();
+  });
+
   it('should get info from country code', () => {
 
     const companyId = '802070748';
-    const companyInfo = CompanyValidation.info('FR', companyId);
+    const companyInfo = CompanyId.info('FR', companyId);
 
     expect(companyInfo).not.toBeNull();
     expect(companyInfo).toEqual({
@@ -64,14 +68,14 @@ describe('Company validation tests', () => {
   });
 
   it('should get validator based on country code', () => {
-   const validationService = CompanyValidation.getValidator('FR');
+   const validationService = CompanyId.getValidator('FR');
    expect(validationService).not.toBeNull();
    expect((validationService as any).countryCode).toBe('FR');
   });
 
   it('should not get validator for unsupported country', () => {
     try {
-      CompanyValidation.validate('AR', '802070749')
+      CompanyId.validate('AR', '802070749')
     } catch (error) {
       expect(error.message).toBe('Unsupported countryCode: AR');
     }

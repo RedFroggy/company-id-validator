@@ -1,9 +1,9 @@
 import {CompanyInfo} from "../../../types/company-info.model";
-import {BeCompanyValidationService} from "./be-company-validation.service";
+import {BeCompanyIdService} from "./be-company-id.service";
 
 describe('Belgium company validation', () => {
 
-  const validationService = new BeCompanyValidationService();
+  const validationService = new BeCompanyIdService();
 
   it('should validate ondernemingsnummer', () => {
     expect(validationService.validate('BE403019261')).toBeTruthy();

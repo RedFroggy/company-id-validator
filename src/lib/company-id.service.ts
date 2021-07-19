@@ -7,7 +7,7 @@ import {CompanyInfo} from "../types/company-info.model";
  * - Returns detailed information on the provided
  * company identifier and country code
  */
-export abstract class CompanyValidationService {
+export abstract class CompanyIdService {
   countryCode: string;
   protected infos: CompanyInfo[];
 
@@ -32,21 +32,14 @@ export abstract class CompanyValidationService {
 
     if (this.infos) {
 
-      // If only one identifier defined no need to check pattern
-      if (this.infos.length === 1) {
-        companyInfo = {...this.infos[0]};
-      } else {
-        // If multiple identifiers, we use regular expressions
-        // in {@see CompanyInfo#pattern} to find the one that matches the most
-        const matchCompanyInfo = this.infos.find((d) => d.pattern
-          && new RegExp(d.pattern).test(sanitizedQuery));
+      const matchedCompanyInfo = this.infos.find((d) => d.pattern
+        && new RegExp(d.pattern).test(sanitizedQuery));
 
-        if (matchCompanyInfo) {
-          companyInfo = Object.assign({}, companyInfo, matchCompanyInfo);
-        }
+      if (matchedCompanyInfo) {
+        companyInfo = Object.assign({}, companyInfo, matchedCompanyInfo);
       }
 
-      const validCompanyId = this.validate(sanitizedQuery);
+      const validCompanyId = Boolean(matchedCompanyInfo && this.validate(sanitizedQuery));
 
       if (validCompanyId) {
 
