@@ -58,7 +58,7 @@ describe('CompanyValidationService tests', () => {
     validationService = new DefaultCompanyValidationService('fr', COMPANY_AD_DATA);
     jest.spyOn(validationService, 'validate').mockReturnValue(true);
     expect(validationService).not.toBeNull();
-    expect(validationService.info('A-799999-X').valid).toBeTruthy();
+    expect(validationService.info('U-132950-X').valid).toBeTruthy();
   });
 
   it('should validate parent company id', () => {

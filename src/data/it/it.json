@@ -3,6 +3,7 @@
     "companyIdDescription": "Partita IVA (Italian VAT number)",
     "companyIdName": "Partita IVA",
     "trustedSourceUrl": "https://telematici.agenziaentrate.gov.it/VerificaPIVA/Scegli.do?parameter=verificaPiva",
-    "parentLevel": true
+    "parentLevel": true,
+    "pattern": "^IT.?\\s?\\d{11}$"
   }
 ]

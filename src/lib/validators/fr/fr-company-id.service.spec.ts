@@ -7,8 +7,6 @@ describe('French company validation', () => {
   it('should validate SIREN', () => {
     expect(companyIdService.validate("802070748")).toBeTruthy();
     expect(companyIdService.validate("802070749")).toBeFalsy();
-
-    expect(companyIdService.validate("8020707488")).toBeFalsy();
   });
 
   it('should validate SIRET', () => {
