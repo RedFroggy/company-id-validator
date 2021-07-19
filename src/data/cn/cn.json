@@ -3,6 +3,7 @@
     "companyIdDescription": "Unified Social Credit Code",
     "companyIdName": "USCC",
     "trustedSourceUrl": "https://zh.wikipedia.org/wiki/统一社会信用代码",
-    "parentLevel": true
+    "parentLevel": true,
+    "pattern": "^[1-9ANY][123459]\\d{6}\\w{9}\\w$"
   }
 ]

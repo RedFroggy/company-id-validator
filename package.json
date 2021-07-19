@@ -35,7 +35,8 @@
     "doc": "npm run doc:html && open-cli dist/docs/index.html",
     "doc:html": "typedoc src/ --exclude **/*.spec.ts --out dist/docs",
     "doc:json": "typedoc src/ --exclude **/*.spec.ts --json dist/docs/typedoc.json",
-    "doc:publish": "npm run doc:html && gh-pages -m \"[ci skip] Updates\" -d dist/docs"
+    "doc:publish": "npm run doc:html && gh-pages -m \"[ci skip] Updates\" -d dist/docs",
+    "prepare": "husky install"
   },
   "engines": {
     "node": ">=10"

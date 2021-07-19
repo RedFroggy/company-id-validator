@@ -2,12 +2,12 @@ import {getCountry} from 'countries-db';
 
 import {CompanyInfo} from "../types/company-info.model";
 
-import {CompanyValidationService} from './company-validation.service';
+import {CompanyIdService} from './company-id.service';
 
-export class CompanyValidation {
-  static VALIDATORS: {isoAlpha2countryCode: string, instance: CompanyValidationService}[] = [];
+export class CompanyId {
+  static VALIDATORS: {isoAlpha2countryCode: string, instance: CompanyIdService}[] = [];
   static validate(countryCode: string, companyId: string): boolean {
-    const info = CompanyValidation.info(countryCode, companyId);
+    const info = CompanyId.info(countryCode, companyId);
     return info && info.valid;
   }
 
@@ -22,11 +22,11 @@ export class CompanyValidation {
       throw new Error('Invalid isoAlpha2 country code');
     }
 
-    return CompanyValidation.getValidator(countryCode).info(companyId);
+    return CompanyId.getValidator(countryCode).info(companyId);
   }
 
-  static getValidator(countryCode: string): CompanyValidationService {
-    const validator: CompanyValidationService = CompanyValidation.VALIDATORS[countryCode];
+  static getValidator(countryCode: string): CompanyIdService {
+    const validator: CompanyIdService = CompanyId.VALIDATORS[countryCode];
 
     if (!validator) {
       throw new Error('Unsupported countryCode: ' + countryCode);

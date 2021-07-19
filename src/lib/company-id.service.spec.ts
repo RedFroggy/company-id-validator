@@ -1,9 +1,9 @@
 import {COMPANY_AD_DATA} from "../data/ad/ad.model";
 import {COMPANY_FR_DATA} from "../data/fr/fr.model";
 
-import {CompanyValidationService} from "./company-validation.service";
+import {CompanyIdService} from "./company-id.service";
 
-class DefaultCompanyValidationService extends CompanyValidationService {
+class DefaultCompanyValidationService extends CompanyIdService {
   validate(companyId: string): boolean {
     return Boolean(companyId);
   }
@@ -21,7 +21,7 @@ class DefaultCompanyValidationService extends CompanyValidationService {
 
 describe('CompanyValidationService tests', () => {
 
-  let validationService: CompanyValidationService;
+  let validationService: CompanyIdService;
 
   beforeEach(() => {
     validationService = new DefaultCompanyValidationService('fr', COMPANY_FR_DATA);
@@ -58,7 +58,7 @@ describe('CompanyValidationService tests', () => {
     validationService = new DefaultCompanyValidationService('fr', COMPANY_AD_DATA);
     jest.spyOn(validationService, 'validate').mockReturnValue(true);
     expect(validationService).not.toBeNull();
-    expect(validationService.info('A-799999-X').valid).toBeTruthy();
+    expect(validationService.info('U-132950-X').valid).toBeTruthy();
   });
 
   it('should validate parent company id', () => {
