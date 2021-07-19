@@ -11,6 +11,19 @@
 
 * [#44](https://github.com/RedFroggy/company-id-validator/issues/44) - Rename CompanyValidation to CompanyId ([fc83e64](https://github.com/RedFroggy/company-id-validator/commit/fc83e64c7e76ba6e81f93b1173424b1ba9e119cd))
 
+# [1.6.0](https://github.com/RedFroggy/company-id-validator/compare/v1.5.0...v1.6.0) (2021-07-19)
+
+
+### Bug Fixes
+
+* [#44](https://github.com/RedFroggy/company-id-validator/issues/44) - Rename CompanyValidation to CompanyId ([11264b8](https://github.com/RedFroggy/company-id-validator/commit/11264b868448f8356b58367068ddd2c5efe6ae2d))
+* [#44](https://github.com/RedFroggy/company-id-validator/issues/44) - Rename CompanyValidation to CompanyId ([6b46eeb](https://github.com/RedFroggy/company-id-validator/commit/6b46eeb8f407644db75a077e758e3d0f15c0a231))
+
+
+### Features
+
+* [#44](https://github.com/RedFroggy/company-id-validator/issues/44) - Rename CompanyValidation to CompanyId ([fc83e64](https://github.com/RedFroggy/company-id-validator/commit/fc83e64c7e76ba6e81f93b1173424b1ba9e119cd))
+
 # [1.5.0](https://github.com/RedFroggy/company-id-validator/compare/v1.4.0...v1.5.0) (2021-03-24)
 
 
