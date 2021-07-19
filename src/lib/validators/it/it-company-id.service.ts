@@ -1,10 +1,10 @@
 import {COMPANY_IT_DATA} from "../../../data/it/it.model";
-import {CompanyValidator} from "../../company-id-validator.decorator";
-import {CompanyValidationService} from "../../company-validation.service";
+import {CompanyIdValidator} from "../../company-id-validator.decorator";
+import {CompanyIdService} from "../../company-id.service";
 import {LuhnUtils} from "../utils/luhn.utils";
 
-@CompanyValidator
-export class ItCompanyValidationService extends CompanyValidationService {
+@CompanyIdValidator
+export class ItCompanyIdService extends CompanyIdService {
 
   constructor() {
     super('IT', COMPANY_IT_DATA);

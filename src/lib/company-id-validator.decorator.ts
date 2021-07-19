@@ -1,12 +1,12 @@
-import {CompanyValidation} from "./company-validation";
-import {CompanyValidationService} from "./company-validation.service";
+import {CompanyId} from "./company-id";
+import {CompanyIdService} from "./company-id.service";
 
 /**
- * Decorator that register a new {@see CompanyValidationService}
- * instance in the static list {@see CompanyValidation#VALIDATORS}
+ * Decorator that register a new {@see CompanyIdService}
+ * instance in the static list {@see CompanyId#VALIDATORS}
  * @param target class annotated with this decorator
  */
-export const CompanyValidator = (target) => {
-  const instance: CompanyValidationService = new target() as CompanyValidationService;
-  CompanyValidation.VALIDATORS[instance.countryCode] = instance;
+export const CompanyIdValidator = (target) => {
+  const instance: CompanyIdService = new target() as CompanyIdService;
+  CompanyId.VALIDATORS[instance.countryCode] = instance;
 }

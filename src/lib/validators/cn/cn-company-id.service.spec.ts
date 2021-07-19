@@ -1,8 +1,8 @@
-import {CnCompanyValidationService} from "./cn-company-validation.service";
+import {CnCompanyIdService} from "./cn-company-id.service";
 
 describe('Chinese company validation', () => {
 
-  const validationService = new CnCompanyValidationService();
+  const validationService = new CnCompanyIdService();
 
   it('should validate USCC', () => {
     expect(validationService.validate('91110000600037341L')).toBeTruthy();

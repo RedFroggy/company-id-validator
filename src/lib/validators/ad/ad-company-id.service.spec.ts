@@ -1,10 +1,10 @@
 import {CompanyInfo} from "../../../types/company-info.model";
 
-import {AdCompanyValidationService} from "./ad-company-validation.service";
+import {AdCompanyIdService} from "./ad-company-id.service";
 
 describe('Andorra company validation', () => {
 
-  const validationService = new AdCompanyValidationService();
+  const validationService = new AdCompanyIdService();
 
   it('should validate NRT', () => {
     expect(validationService.validate('U-132950-X')).toBeTruthy();
