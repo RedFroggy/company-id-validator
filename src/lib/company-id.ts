@@ -23,10 +23,6 @@ export class CompanyId {
       throw new Error('Invalid isoAlpha2 country code');
     }
 
-    return CompanyId.getValidator(countryCode).info(companyId);
-  }
-
-  static getValidator(countryCode: string): CompanyIdService {
     const validator: CompanyIdService = IocContainer
       .findByName(`${countryCode.toLowerCase()}companyidservice`);
 
@@ -34,6 +30,6 @@ export class CompanyId {
       throw new Error('Unsupported countryCode: ' + countryCode);
     }
 
-    return validator;
+    return validator.info(companyId);
   }
 }

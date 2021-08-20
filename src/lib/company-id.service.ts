@@ -39,7 +39,7 @@ export abstract class CompanyIdService {
         companyInfo = Object.assign({}, companyInfo, matchedCompanyInfo);
       }
 
-      const validCompanyId = Boolean(matchedCompanyInfo && this.validate(sanitizedQuery));
+      const validCompanyId = Boolean(matchedCompanyInfo && this.validate(sanitizedQuery, matchedCompanyInfo));
 
       if (validCompanyId) {
 
@@ -102,5 +102,5 @@ export abstract class CompanyIdService {
    * Validate the given {@see companyId}
    * based on local algorithm
    */
-  abstract validate(companyId: string): boolean;
+  abstract validate(companyId: string, info?: CompanyInfo): boolean;
 }
