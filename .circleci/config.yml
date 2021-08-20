@@ -29,6 +29,7 @@ jobs:
       - run: npm run test:ci
       - run: npm run codecov
       - run: npm run build
+      - run: npm run doc:html
       - save_cache:
           key: *dist_key
           paths:

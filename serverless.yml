@@ -1,0 +1,35 @@
+service: company-id
+
+frameworkVersion: '2'
+variablesResolutionMode: 20210326
+
+provider:
+    name: aws
+    runtime: nodejs14.x
+    stage: local
+    region: eu-west-1
+    lambdaHashingVersion: 20201221
+    memorySize: 128
+plugins:
+    - serverless-bundle
+    - serverless-offline
+
+custom:
+  bundle:
+    linting: false
+
+package:
+    individually: true
+
+functions:
+  getCompanyInfoByCountryCodeAndId:
+    handler: src/lib/handler/company-id-handler.getCompanyInfoByCountryCodeAndId
+    events:
+      - http:
+          path: /{countryCode}/companies/{companyId}
+          method: get
+          request:
+            parameters:
+              paths:
+                countryCode: true
+                companyId: true
