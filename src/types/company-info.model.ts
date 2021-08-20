@@ -9,8 +9,10 @@ export interface CompanyInfo {
   parentCompanyId?: string;
   // Local VAT number
   vatNumber?: string;
-  // Local company identifier name
+  // Local company identifier short name
   companyIdName?: string;
+  // Local company identifier full name
+  companyIdFullName?: string;
   // Local company identifier description
   companyIdDescription?: string;
   // Iso alpha2 country code of the company

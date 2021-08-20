@@ -57,6 +57,7 @@ describe('Company validation tests', () => {
       companyId,
       sanitizedQuery: companyId,
       companyIdDescription: jasmine.anything(),
+      companyIdFullName: jasmine.anything(),
       countryCode: 'FR',
       valid: true,
       trustedSourceUrl: jasmine.anything(),
