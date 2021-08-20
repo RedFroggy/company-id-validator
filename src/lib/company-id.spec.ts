@@ -69,7 +69,7 @@ describe('Company validation tests', () => {
   });
 
   it('should get validator based on country code', () => {
-   const validationService = CompanyId.getValidator('FR');
+   const validationService = CompanyId.info('FR', '802070748');
    expect(validationService).not.toBeNull();
    expect((validationService as any).countryCode).toBe('FR');
   });
