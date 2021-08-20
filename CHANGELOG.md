@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/RedFroggy/company-id-validator/compare/v1.6.0...v1.7.0) (2021-08-20)
+
+
+### Features
+
+* Update identifiers data description ([9cfdacb](https://github.com/RedFroggy/company-id-validator/commit/9cfdacb2a734d10435599165f2583e36bb5bb6e9))
+
 # [1.6.0](https://github.com/RedFroggy/company-id-validator/compare/v1.5.0...v1.6.0) (2021-07-27)
 
 
