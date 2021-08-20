@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/RedFroggy/company-id-validator/compare/v1.8.0...v1.9.0) (2021-08-20)
+
+
+### Features
+
+* [#69](https://github.com/RedFroggy/company-id-validator/issues/69) - Support spanish company identifier ([7c011c9](https://github.com/RedFroggy/company-id-validator/commit/7c011c9400bf3cb022f00dba8041a656dcb03c3b))
+
 # [1.8.0](https://github.com/RedFroggy/company-id-validator/compare/v1.7.0...v1.8.0) (2021-08-20)
 
 
