@@ -66,7 +66,7 @@ describe('CompanyValidationService tests', () => {
     expect(validationService.info('802070748')).toEqual({
       companyId: '802070748',
       companyIdName: 'SIREN',
-      companyIdFullName: "Système d'Identification du Répertoire des Entreprises",
+      companyIdFullName: jasmine.anything(),
       companyIdDescription: jasmine.anything(),
       trustedSourceUrl: jasmine.anything(),
       parentLevel: true,
@@ -84,7 +84,7 @@ describe('CompanyValidationService tests', () => {
     expect(validationService.info('FR802070748')).toEqual({
       companyId: '802070748',
       companyIdName: 'VAT',
-      companyIdFullName: "Numéro de TVA intracommunautaire",
+      companyIdFullName: jasmine.anything(),
       companyIdDescription: jasmine.anything(),
       trustedSourceUrl: jasmine.anything(),
       parentLevel: true,

@@ -438,7 +438,7 @@ class CompanyId {
       throw new Error('The company identifier is mandatory');
     }
 
-    if (Object(countries_db__WEBPACK_IMPORTED_MODULE_2__["getCountry"])(countryCode) == null) {
+    if (!Object(countries_db__WEBPACK_IMPORTED_MODULE_2__["getCountry"])(countryCode)) {
       throw new Error('Invalid isoAlpha2 country code');
     }
 
@@ -446,7 +446,6 @@ class CompanyId {
   }
 
   static getValidator(countryCode) {
-    console.log(CompanyId.VALIDATORS);
     const validator = CompanyId.VALIDATORS[countryCode.toUpperCase()];
 
     if (!validator) {
@@ -481,10 +480,20 @@ __webpack_require__.r(__webpack_exports__);
 
 async function getCompanyInfoByCountryCodeAndId(event) {
   return new Promise(resolve => {
-    resolve({
-      statusCode: 200,
-      body: JSON.stringify(_company_id__WEBPACK_IMPORTED_MODULE_2__["CompanyId"].info(event.pathParameters.countryCode, event.pathParameters.companyId))
-    });
+    try {
+      const companyInfo = _company_id__WEBPACK_IMPORTED_MODULE_2__["CompanyId"].info(event.pathParameters.countryCode, event.pathParameters.companyId);
+      resolve({
+        statusCode: 200,
+        body: JSON.stringify(companyInfo)
+      });
+    } catch (error) {
+      resolve({
+        statusCode: 400,
+        body: JSON.stringify({
+          reason: error.message
+        })
+      });
+    }
   });
 }
 
