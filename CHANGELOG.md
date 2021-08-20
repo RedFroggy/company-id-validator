@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/RedFroggy/company-id-validator/compare/v1.7.0...v1.8.0) (2021-08-20)
+
+
+### Features
+
+* refactor ioc ([1319a43](https://github.com/RedFroggy/company-id-validator/commit/1319a43169e41825dd21e45d666b878e13d4c2de))
+
 # [1.7.0](https://github.com/RedFroggy/company-id-validator/compare/v1.6.0...v1.7.0) (2021-08-20)
 
 
