@@ -1,12 +1,12 @@
 import {COMPANY_AD_DATA} from "../../../data/ad/ad.model";
-import {CompanyIdValidator} from "../../company-id-validator.decorator";
 import {CompanyIdService} from "../../company-id.service";
+import {Injectable} from "../../injectable.decorator";
 
 /**
  * Validate andorra companies identifiers: NRT.
  * See {@link https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/Andorra-TIN.pdf}
  */
-@CompanyIdValidator
+@Injectable
 export class AdCompanyIdService extends CompanyIdService {
   constructor() {
     super('AD', COMPANY_AD_DATA);

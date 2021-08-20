@@ -1,9 +1,9 @@
 import {COMPANY_IT_DATA} from "../../../data/it/it.model";
-import {CompanyIdValidator} from "../../company-id-validator.decorator";
 import {CompanyIdService} from "../../company-id.service";
+import {Injectable} from "../../injectable.decorator";
 import {LuhnUtils} from "../utils/luhn.utils";
 
-@CompanyIdValidator
+@Injectable
 export class ItCompanyIdService extends CompanyIdService {
 
   constructor() {

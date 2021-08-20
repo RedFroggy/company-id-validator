@@ -1,8 +1,8 @@
 import {COMPANY_BE_DATA} from "../../../data/be/be.model";
-import {CompanyIdValidator} from "../../company-id-validator.decorator";
 import {CompanyIdService} from "../../company-id.service";
+import {Injectable} from "../../injectable.decorator";
 
-@CompanyIdValidator
+@Injectable
 export class BeCompanyIdService extends CompanyIdService {
   constructor() {
     super('BE', COMPANY_BE_DATA);

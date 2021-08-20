@@ -1,8 +1,8 @@
 import {COMPANY_CN_DATA} from "../../../data/cn/cn.model";
-import {CompanyIdValidator} from "../../company-id-validator.decorator";
 import {CompanyIdService} from "../../company-id.service";
+import {Injectable} from "../../injectable.decorator";
 
-@CompanyIdValidator
+@Injectable
 export class CnCompanyIdService extends CompanyIdService {
 
   constructor() {
