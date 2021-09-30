@@ -62,7 +62,7 @@
     "eslint-plugin-functional": "3.5.0",
     "eslint-plugin-import": "2.24.0",
     "gh-pages": "3.2.3",
-    "glob": "7.1.7",
+    "glob": "7.2.0",
     "husky": "7.0.1",
     "is-ci": "3.0.0",
     "jasmine-core": "3.8.0",
