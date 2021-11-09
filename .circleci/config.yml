@@ -2,7 +2,7 @@ version: 2 # use CircleCI 2.0
 
 job_defaults: &job_defaults
   docker:
-    - image: circleci/node:12-browsers
+    - image: circleci/node:16-browsers
 
 cache_key: &cache_key company-id-validation-deps-cache-{{ .Branch }}-{{ checksum "package-lock.json" }}
 dist_key: &dist_key company-id-validation-dist-{{ .Revision }}
