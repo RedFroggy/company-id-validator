@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/RedFroggy/company-id-validator/compare/v1.10.0...v1.10.1) (2021-11-10)
+
+
+### Bug Fixes
+
+* french vat number format ([3228395](https://github.com/RedFroggy/company-id-validator/commit/3228395ee6269ef0af631ac5e54d5d806c33ad4c))
+
 # [1.10.0](https://github.com/RedFroggy/company-id-validator/compare/v1.9.0...v1.10.0) (2021-11-10)
 
 
