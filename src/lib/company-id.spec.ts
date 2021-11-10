@@ -49,7 +49,7 @@ describe('Company validation tests', () => {
 
   it('should get info from country code', () => {
 
-    const id = 'FR802070748';
+    const id = '802070748';
     const companyInfo = CompanyId.info('FR', id);
 
     expect(companyInfo).not.toBeNull();
@@ -62,11 +62,11 @@ describe('Company validation tests', () => {
       countryCode: 'FR',
       valid: true,
       trustedSourceUrl: jasmine.anything(),
-      name: 'VAT',
+      name: 'SIREN',
       parentLevel: true,
       pattern: jasmine.anything(),
-      vatNumber: id,
-      type: CompanyIdType.VAT
+      vatNumber: 'FR89802070748',
+      type: CompanyIdType.LOCAL_COMPANY_ID
     });
   });
 
