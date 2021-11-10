@@ -11,7 +11,7 @@ describe('French company validation', () => {
   });
 
   it('should validate VAT number', () => {
-    expect(companyIdService.validate("FR802070748", {type: CompanyIdType.VAT})).toBeTruthy();
+    expect(companyIdService.validate("FR89802070748", {type: CompanyIdType.VAT})).toBeTruthy();
   });
 
   it('should validate SIRET', () => {

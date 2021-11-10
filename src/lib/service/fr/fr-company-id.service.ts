@@ -33,7 +33,7 @@ export class FrCompanyIdService extends CompanyIdService {
   }
 
   vatNumberToCompanyId(vatNumber?: string): string {
-    return vatNumber.substring(2);
+    return vatNumber.substring(4);
   }
 
   toParentCompanyId(companyId: string): string {

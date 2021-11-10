@@ -15,7 +15,7 @@ class DefaultCompanyValidationService extends CompanyIdService {
 
   protected vatNumberToCompanyId(vatNumber?: string): string {
     super.vatNumberToCompanyId(vatNumber);
-    return vatNumber.substring(2);
+    return vatNumber.substring(4);
   }
 }
 
@@ -84,7 +84,7 @@ describe('CompanyValidationService tests', () => {
 
   it('should validate VAT number', () => {
     expect(validationService).not.toBeNull();
-    expect(validationService.info('FR802070748')).toEqual({
+    expect(validationService.info('FR89802070748')).toEqual({
       id: '802070748',
       name: 'VAT',
       fullName: "Numéro de TVA intracommunautaire",
@@ -93,10 +93,10 @@ describe('CompanyValidationService tests', () => {
       parentLevel: true,
       pattern: jasmine.anything(),
       countryCode: 'FR',
-      query: 'FR802070748',
+      query: 'FR89802070748',
       valid: true,
-      sanitizedQuery: 'FR802070748',
-      vatNumber: 'FR802070748',
+      sanitizedQuery: 'FR89802070748',
+      vatNumber: 'FR89802070748',
       type: CompanyIdType.VAT
     });
   });
