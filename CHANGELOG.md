@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/RedFroggy/company-id-validator/compare/v1.9.0...v1.10.0) (2021-11-10)
+
+
+### Features
+
+* update dependencies + data refacto ([00477ac](https://github.com/RedFroggy/company-id-validator/commit/00477acf840fce8d475bd47113fef8f9a3b0c825))
+
 # [1.9.0](https://github.com/RedFroggy/company-id-validator/compare/v1.8.0...v1.9.0) (2021-08-20)
 
 
