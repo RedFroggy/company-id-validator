@@ -24,7 +24,7 @@ describe('CompanyValidationService tests', () => {
   let validationService: CompanyIdService;
 
   beforeEach(() => {
-    validationService = new DefaultCompanyValidationService('fr', COMPANY_FR_DATA);
+    validationService = new DefaultCompanyValidationService('FR', COMPANY_FR_DATA);
     jest.spyOn(validationService, 'validate').mockReturnValue(true);
   })
 
@@ -38,7 +38,7 @@ describe('CompanyValidationService tests', () => {
   });
 
   it('should not validate if no country info', () => {
-    validationService = new DefaultCompanyValidationService('fr', null);
+    validationService = new DefaultCompanyValidationService('FR', null);
     expect(validationService.info('802070748')).toEqual({
       countryCode: 'FR',
       query: '802070748',
@@ -57,7 +57,7 @@ describe('CompanyValidationService tests', () => {
   });
 
   it('should validate single company identifier', () => {
-    validationService = new DefaultCompanyValidationService('fr', COMPANY_AD_DATA);
+    validationService = new DefaultCompanyValidationService('FR', COMPANY_AD_DATA);
     jest.spyOn(validationService, 'validate').mockReturnValue(true);
     expect(validationService).not.toBeNull();
     expect(validationService.info('U-132950-X').valid).toBeTruthy();

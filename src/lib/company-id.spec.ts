@@ -27,7 +27,7 @@ describe('Company validation tests', () => {
     expect(CompanyId.validate('FR', '802070749')).toBeFalsy();
 
     try {
-      CompanyId.validate('dess', '802070749')
+      CompanyId.validate('dess' as any, '802070749')
     } catch (error) {
       expect(error.message).toBe('Invalid isoAlpha2 country code');
     }

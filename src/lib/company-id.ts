@@ -1,4 +1,7 @@
-import {isValid as isValidAlpha2CountryCode} from 'i18n-iso-countries';
+import {
+  Alpha2Code,
+  isValid as isValidAlpha2CountryCode
+} from 'i18n-iso-countries';
 
 import {CompanyIdInfoModel} from "../types/company-id-info.model";
 
@@ -7,12 +10,12 @@ import {IocContainer} from "./ioc-container";
 
 export class CompanyId {
 
-  static validate(countryCode: string, companyId: string): boolean {
+  static validate(countryCode: Alpha2Code, companyId: string): boolean {
     const info = CompanyId.info(countryCode, companyId);
     return info && info.valid;
   }
 
-  static info(countryCode: string, companyId: string): CompanyIdInfoModel {
+  static info(countryCode: Alpha2Code, companyId: string): CompanyIdInfoModel {
     if (!countryCode) {
       throw new Error('The country code is mandatory');
     }
