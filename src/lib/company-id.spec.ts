@@ -1,5 +1,6 @@
+import {CompanyIdType} from "../types/company-id-type";
 import {CompanyId} from './company-id';
-import './validators';
+import './service';
 
 describe('Company validation tests', () => {
   it('should validate', () => {
@@ -48,23 +49,24 @@ describe('Company validation tests', () => {
 
   it('should get info from country code', () => {
 
-    const companyId = '802070748';
-    const companyInfo = CompanyId.info('FR', companyId);
+    const id = 'FR802070748';
+    const companyInfo = CompanyId.info('FR', id);
 
     expect(companyInfo).not.toBeNull();
     expect(companyInfo).toEqual({
-      query: companyId,
-      companyId,
-      sanitizedQuery: companyId,
-      companyIdDescription: jasmine.anything(),
-      companyIdFullName: jasmine.anything(),
+      query: id,
+      id: jasmine.anything(),
+      sanitizedQuery: id,
+      description: jasmine.anything(),
+      fullName: jasmine.anything(),
       countryCode: 'FR',
       valid: true,
       trustedSourceUrl: jasmine.anything(),
-      companyIdName: 'SIREN',
+      name: 'VAT',
       parentLevel: true,
       pattern: jasmine.anything(),
-      vatNumber: 'FR89' + companyId
+      vatNumber: id,
+      type: CompanyIdType.VAT
     });
   });
 

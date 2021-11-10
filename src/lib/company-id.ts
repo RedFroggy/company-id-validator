@@ -1,8 +1,8 @@
-import {getCountry} from 'countries-db';
+import {isValid as isValidAlpha2CountryCode} from 'i18n-iso-countries';
 
-import {CompanyInfo} from "../types/company-info.model";
+import {CompanyIdInfoModel} from "../types/company-id-info.model";
 
-import {CompanyIdService} from './company-id.service';
+import {CompanyIdService} from './service/company-id.service';
 import {IocContainer} from "./ioc-container";
 
 export class CompanyId {
@@ -12,14 +12,14 @@ export class CompanyId {
     return info && info.valid;
   }
 
-  static info(countryCode: string, companyId: string): CompanyInfo {
+  static info(countryCode: string, companyId: string): CompanyIdInfoModel {
     if (!countryCode) {
       throw new Error('The country code is mandatory');
     }
     if (!companyId) {
       throw new Error('The company identifier is mandatory');
     }
-    if (!getCountry(countryCode)) {
+    if (!isValidAlpha2CountryCode(countryCode)) {
       throw new Error('Invalid isoAlpha2 country code');
     }
 

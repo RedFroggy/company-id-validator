@@ -23,15 +23,14 @@
   },
   "scripts": {
     "build": "npm run build:main && npm run build:module",
-    "build:main": "npm run build:data && tsc -p tsconfig.json",
-    "build:module": "npm run build:data && tsc -p tsconfig.module.json",
-    "build:data": "node build/json-to-typescript.js",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
     "codecov": "codecov",
     "semantic-release": "semantic-release",
-    "test": "npm run build:data && jest --config ./test/jest.config.js",
-    "test:ci": "npm run build:data && jest --config ./test/jest.config.js --coverage",
+    "test": "jest --config ./test/jest.config.js",
+    "test:ci": "jest --config ./test/jest.config.js --coverage",
     "lint": "eslint src --ext .ts",
-    "watch:build": "npm run build:data && tsc -p tsconfig.json -w",
+    "watch:build": "tsc -p tsconfig.json -w",
     "doc": "npm run doc:html && open-cli dist/docs/index.html",
     "doc:html": "typedoc src/ --exclude **/*.spec.ts --out dist/docs",
     "doc:json": "typedoc src/ --exclude **/*.spec.ts --json dist/docs/typedoc.json",
@@ -42,7 +41,7 @@
     "node": ">=10"
   },
   "dependencies": {
-    "countries-db": "1.2.0"
+    "i18n-iso-countries": "7.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "13.2.1",

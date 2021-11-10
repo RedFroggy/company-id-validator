@@ -53,13 +53,15 @@ console.log(info);
   "valid": true,
   "query": "802070748",
   "sanitizedQuery": "802070748",
-  "companyIdDescription": "Système d'Identification du Répertoire des Entreprises",
-  "companyIdName": "SIREN",
+  "countryCode": "FR",
+  "name": "SIREN",
+  "fullName": "Système d'Identification du Répertoire des Entreprises",
+  "type": "LOCAL_COMPANY_ID",
+  "description": "The SIREN (Système d'Identification du Répertoire des Entreprises) is a 9\ndigit number used to identify French companies. The Luhn checksum is used\nto validate the numbers.",
   "trustedSourceUrl": "https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_entreprises",
   "pattern": "^\\d{9}$",
   "parentLevel": true,
-  "countryCode": "FR",
-  "companyId": "802070748",
+  "id": "802070748",
   "vatNumber": "FR89802070748"
 }
 ```

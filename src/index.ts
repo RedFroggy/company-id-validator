@@ -1,4 +1,4 @@
 export { CompanyId } from './lib/company-id';
-export { CompanyInfo } from './types/company-info.model';
+export { CompanyIdInfoModel } from './types/company-id-info.model';
 
-import './lib/validators';
+import './lib/service';
