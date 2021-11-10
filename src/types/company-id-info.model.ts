@@ -20,8 +20,12 @@ export interface CompanyIdInfoModel {
   parentId?: string;
   // Local VAT number
   vatNumber?: string;
+  // Id locale
+  locale?: string;
   // Iso alpha2 country code of the company
   countryCode?: Alpha2Code;
+  // Full name of the country
+  countryName?: string;
   // True if the company id is valid in regards of the local algorithm validation
   valid?: boolean;
   // Trusted url where you can find info about the local company identifier
