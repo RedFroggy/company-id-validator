@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/RedFroggy/company-id-validator/compare/v1.10.1...v1.11.0) (2021-11-10)
+
+
+### Features
+
+* add company id country name + locale ([641e2a5](https://github.com/RedFroggy/company-id-validator/commit/641e2a50f6f8ab90f233712452ccad104d430c61))
+
 ## [1.10.1](https://github.com/RedFroggy/company-id-validator/compare/v1.10.0...v1.10.1) (2021-11-10)
 
 
