@@ -61,7 +61,6 @@ describe('Company validation tests', () => {
       fullName: jasmine.anything(),
       countryCode: 'FR',
       countryName: 'France',
-      locale: 'fr',
       valid: true,
       trustedSourceUrl: jasmine.anything(),
       name: 'SIREN',

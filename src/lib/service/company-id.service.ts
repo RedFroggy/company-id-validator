@@ -1,6 +1,6 @@
 import {Alpha2Code, getName} from 'i18n-iso-countries';
-import {CompanyIdType} from "../../types/company-id-type";
 import {CompanyIdInfoModel} from "../../types/company-id-info.model";
+import {CompanyIdType} from "../../types/company-id-type";
 
 /**
  * Abstract company validation service
@@ -40,10 +40,7 @@ export abstract class CompanyIdService {
 
       if (matchedCompanyInfo) {
         companyIdInfo = Object.assign({}, companyIdInfo, matchedCompanyInfo);
-        if (!companyIdInfo.locale) {
-          companyIdInfo.locale = companyIdInfo.countryCode.toLowerCase();
-        }
-        companyIdInfo.countryName = getName(companyIdInfo.countryCode, companyIdInfo.locale);
+        companyIdInfo.countryName = getName(companyIdInfo.countryCode, 'en');
       }
 
       const validCompanyId = Boolean(matchedCompanyInfo && this.validate(sanitizedQuery, matchedCompanyInfo));

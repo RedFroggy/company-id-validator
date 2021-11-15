@@ -21,6 +21,6 @@ describe('Switzerland company validation', () => {
 
   it('should have info', () => {
     const info:CompanyIdInfoModel = validationService.info('CHE100155212');
-    expect(info).not.toBeNull();
+    expect(info).toBeDefined();
   });
 });
