@@ -1,3 +1,11 @@
+# [1.12.0](https://github.com/RedFroggy/company-id-validator/compare/v1.11.0...v1.12.0) (2021-11-16)
+
+
+### Features
+
+* add gb,sc and ni countries ([b0f8abe](https://github.com/RedFroggy/company-id-validator/commit/b0f8abef243a9863ebd2f1b8a81ee9d2ce1dec0b))
+* add germany company id validation ([bf8c160](https://github.com/RedFroggy/company-id-validator/commit/bf8c16044ea7f7fd9ce11b8743e685dce3754d9b))
+
 # [1.11.0](https://github.com/RedFroggy/company-id-validator/compare/v1.10.1...v1.11.0) (2021-11-10)
 
 
