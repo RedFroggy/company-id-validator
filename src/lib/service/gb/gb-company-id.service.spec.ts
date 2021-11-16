@@ -50,6 +50,5 @@ describe('United kingdom company validation', () => {
   it('should get GB company info by CRN', () => {
     const info = validationService.info('02282265');
     expect(info).toBeDefined();
-    expect(info.type).toBe(CompanyIdType.LOCAL_COMPANY_ID);
   });
 })

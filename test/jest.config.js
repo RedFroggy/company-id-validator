@@ -3,7 +3,12 @@ module.exports = {
   roots: ['src'],
   testRunner: 'jest-jasmine2',
   coverageDirectory: '<rootDir>/dist/test-results/',
-  collectCoverageFrom: ['src/lib/**/*.ts', '!src/lib/**/*.spec.ts', '!src/**/*/index.ts'],
+  collectCoverageFrom: [
+    'src/lib/**/*.ts',
+    '!src/lib/**/*.spec.ts',
+    '!src/**/index.ts',
+    '!src/**/*.model.ts'
+  ],
   coverageThreshold: {
     global: {
       statements: 100,
