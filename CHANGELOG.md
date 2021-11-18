@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/RedFroggy/company-id-validator/compare/v1.13.0...v1.13.1) (2021-11-18)
+
+
+### Bug Fixes
+
+* add missing de company services import ([f1dad9a](https://github.com/RedFroggy/company-id-validator/commit/f1dad9abd3635cf72f5b1d017834606816882d7a))
+
 # [1.13.0](https://github.com/RedFroggy/company-id-validator/compare/v1.12.0...v1.13.0) (2021-11-18)
 
 
