@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/RedFroggy/company-id-validator/compare/v1.12.0...v1.13.0) (2021-11-18)
+
+
+### Features
+
+* add german vat number support ([1386330](https://github.com/RedFroggy/company-id-validator/commit/138633058ebc3d6dc29496c570100cd20f8db5b6))
+
 # [1.12.0](https://github.com/RedFroggy/company-id-validator/compare/v1.11.0...v1.12.0) (2021-11-16)
 
 
