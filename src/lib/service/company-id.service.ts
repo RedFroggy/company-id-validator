@@ -1,6 +1,9 @@
-import {Alpha2Code, getName} from 'i18n-iso-countries';
+import {Alpha2Code, getName, registerLocale} from 'i18n-iso-countries';
 import {CompanyIdInfoModel} from "../../types/company-id-info.model";
 import {CompanyIdType} from "../../types/company-id-type";
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+registerLocale(require("i18n-iso-countries/langs/en.json"));
 
 /**
  * Abstract company validation service
@@ -40,7 +43,7 @@ export abstract class CompanyIdService {
 
       if (matchedCompanyInfo) {
         companyIdInfo = Object.assign({}, companyIdInfo, matchedCompanyInfo);
-        companyIdInfo.countryName = getName(companyIdInfo.countryCode, 'en');
+        companyIdInfo.countryName = getName(companyIdInfo.countryCode, 'en', {select: 'alias'});
       }
 
       const validCompanyId = Boolean(matchedCompanyInfo && this.validate(sanitizedQuery, matchedCompanyInfo));

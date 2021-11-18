@@ -1,6 +1,6 @@
 import {
   Alpha2Code,
-  isValid as isValidAlpha2CountryCode
+  isValid as isValidAlpha2CountryCode,
 } from 'i18n-iso-countries';
 
 import {CompanyIdInfoModel} from "../types/company-id-info.model";

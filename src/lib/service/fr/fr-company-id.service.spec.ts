@@ -33,6 +33,7 @@ describe('French company validation', () => {
     let info:CompanyIdInfoModel = companyIdService.info('802070748');
     expect(info).toBeDefined();
     expect(info.type).toBe(CompanyIdType.LOCAL_COMPANY_ID);
+    expect(info.countryName).toBe('France');
     expect(info.valid).toBeTruthy();
 
     info = companyIdService.info('80207074800016');

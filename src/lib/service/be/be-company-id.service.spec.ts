@@ -22,6 +22,7 @@ describe('Belgium company validation', () => {
   it('should have info', () => {
     const info:CompanyIdInfoModel = validationService.info('BE403019261');
     expect(info).not.toBeNull();
+    expect(info.countryName).toBe('Belgium');
     expect(info.type).toBe(CompanyIdType.VAT);
     expect(info.valid).toBeTruthy();
   });
