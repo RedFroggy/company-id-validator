@@ -1,4 +1,5 @@
 import {CompanyIdInfoModel} from "../../../types/company-id-info.model";
+import {CompanyIdType} from "../../../types/company-id-type";
 import {ItCompanyIdService} from "./it-company-id.service";
 
 describe('French company validation', () => {
@@ -28,6 +29,8 @@ describe('French company validation', () => {
 
   it('should have info', () => {
     const info:CompanyIdInfoModel = validationService.info('IT00743110157');
+    expect(info.valid).toBeTruthy();
+    expect(info.type).toBe(CompanyIdType.LOCAL_COMPANY_ID);
     expect(info).not.toBeNull();
   });
 

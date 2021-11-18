@@ -24,6 +24,7 @@ describe('Northern ireland company validation', () => {
   it('should get NI company info by BRN', () => {
     const info = validationService.info('NF123456');
     expect(info).toBeDefined();
+    expect(info.valid).toBeTruthy();
     expect(info.type).toBe(CompanyIdType.LOCAL_COMPANY_ID);
   });
 });

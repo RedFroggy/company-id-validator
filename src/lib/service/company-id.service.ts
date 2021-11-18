@@ -35,8 +35,8 @@ export abstract class CompanyIdService {
 
     if (this.infos) {
 
-      const matchedCompanyInfo = this.infos.find((d) => d.pattern
-        && new RegExp(d.pattern).test(sanitizedQuery));
+      const matchedCompanyInfo = this.infos.find((info) => info.pattern
+        && new RegExp(info.pattern).test(this.processBeforeValidation(sanitizedQuery, info)));
 
       if (matchedCompanyInfo) {
         companyIdInfo = Object.assign({}, companyIdInfo, matchedCompanyInfo);
@@ -79,7 +79,11 @@ export abstract class CompanyIdService {
     return null;
   }
 
-  isParentLevelCompanyId(companyId: string): boolean {
+  protected processBeforeValidation(companyId: string, companyInfo?: CompanyIdInfoModel): string {
+    return companyId;
+  }
+
+  protected isParentLevelCompanyId(companyId: string): boolean {
     return this.infos.some(info => info.parentLevel
       && new RegExp(info.pattern).test(companyId));
   }

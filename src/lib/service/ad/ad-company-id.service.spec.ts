@@ -1,4 +1,5 @@
 import {CompanyIdInfoModel} from "../../../types/company-id-info.model";
+import {CompanyIdType} from "../../../types/company-id-type";
 
 import {AdCompanyIdService} from "./ad-company-id.service";
 
@@ -34,5 +35,7 @@ describe('Andorra company validation', () => {
   it('should have info', () => {
     const info:CompanyIdInfoModel = validationService.info('U-132950-X');
     expect(info).not.toBeNull();
+    expect(info.type).toBe(CompanyIdType.LOCAL_COMPANY_ID);
+    expect(info.valid).toBeTruthy();
   });
 });

@@ -34,4 +34,6 @@ export interface CompanyIdInfoModel {
   pattern?: string;
   // True for a parent level company identifier
   parentLevel?: boolean;
+  // Specific country properties
+  extraProperties?: any;
 }

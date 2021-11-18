@@ -14,7 +14,7 @@ export const COMPANY_BE_DATA: CompanyIdInfoModel[] = [
     fullName: "VAT number",
     type: CompanyIdType.VAT,
     name: "VAT",
-    pattern: "^BE[ \\.\\-]?[01][0-9]{3}[ \\.\\-]?[0-9]{3}[ \\.\\-]?[0-9]{3}$",
+    pattern: "^BE[ \\.\\-]?[01]?[0-9]{3}[ \\.\\-]?[0-9]{3}[ \\.\\-]?[0-9]{3}$",
     parentLevel: true
   }
 ];

@@ -1,4 +1,5 @@
 import {CompanyIdInfoModel} from "../../../types/company-id-info.model";
+import {CompanyIdType} from "../../../types/company-id-type";
 import {BeCompanyIdService} from "./be-company-id.service";
 
 describe('Belgium company validation', () => {
@@ -21,6 +22,8 @@ describe('Belgium company validation', () => {
   it('should have info', () => {
     const info:CompanyIdInfoModel = validationService.info('BE403019261');
     expect(info).not.toBeNull();
+    expect(info.type).toBe(CompanyIdType.VAT);
+    expect(info.valid).toBeTruthy();
   });
 
   it('should calculate ondernemingsnummer from VAT number', () => {

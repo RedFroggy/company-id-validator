@@ -12,6 +12,7 @@ describe('United kingdom company validation', () => {
   it('should get SC company info', () => {
     const info = validationService.info('SC123456');
     expect(info).toBeDefined();
+    expect(info.valid).toBeTruthy();
     expect(info.type).toBe(CompanyIdType.LOCAL_COMPANY_ID);
   });
 });

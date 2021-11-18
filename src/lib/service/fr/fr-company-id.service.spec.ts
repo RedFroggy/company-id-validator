@@ -1,3 +1,4 @@
+import {CompanyIdInfoModel} from "../../../types/company-id-info.model";
 import {CompanyIdType} from "../../../types/company-id-type";
 import {FrCompanyIdService} from "./fr-company-id.service";
 
@@ -26,5 +27,22 @@ describe('French company validation', () => {
 
   it('should calculate siren from VAT number', () => {
     expect(companyIdService.vatNumberToCompanyId("FR89802070748")).toBe("802070748");
+  });
+
+  it('should have info', () => {
+    let info:CompanyIdInfoModel = companyIdService.info('802070748');
+    expect(info).toBeDefined();
+    expect(info.type).toBe(CompanyIdType.LOCAL_COMPANY_ID);
+    expect(info.valid).toBeTruthy();
+
+    info = companyIdService.info('80207074800016');
+    expect(info).toBeDefined();
+    expect(info.type).toBe(CompanyIdType.LOCAL_COMPANY_ID);
+    expect(info.valid).toBeTruthy();
+
+    info = companyIdService.info('FR89802070748');
+    expect(info).toBeDefined();
+    expect(info.type).toBe(CompanyIdType.VAT);
+    expect(info.valid).toBeTruthy();
   });
 });

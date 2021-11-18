@@ -1,3 +1,5 @@
+import {CompanyIdInfoModel} from "../../../types/company-id-info.model";
+import {CompanyIdType} from "../../../types/company-id-type";
 import {EsCompanyIdService} from "./es-company-id.service";
 import {COMPANY_ES_DATA} from "./es.model";
 
@@ -27,5 +29,12 @@ describe('Spanish company validation', () => {
 
     // Invalid first character
     expect(validationService.validate('O-1234567-L', companyInfo)).toBeFalsy();
+  });
+
+  it('should have info', () => {
+    const info:CompanyIdInfoModel = validationService.info('J99216582');
+    expect(info).toBeDefined();
+    expect(info.type).toBe(CompanyIdType.LOCAL_COMPANY_ID);
+    expect(info.valid).toBeTruthy();
   });
 });
