@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/RedFroggy/company-id-validator/compare/v1.13.1...v1.13.2) (2021-11-18)
+
+
+### Bug Fixes
+
+* country name not displayed ([a3e1b1c](https://github.com/RedFroggy/company-id-validator/commit/a3e1b1c2c686c7fee21b1631db36f41223bfc531))
+
 ## [1.13.1](https://github.com/RedFroggy/company-id-validator/compare/v1.13.0...v1.13.1) (2021-11-18)
 
 
