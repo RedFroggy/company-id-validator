@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/RedFroggy/company-id-validator/compare/v1.13.2...v1.14.0) (2021-11-23)
+
+
+### Features
+
+* add no,se and pl country identifiers support ([401a017](https://github.com/RedFroggy/company-id-validator/commit/401a017c555ed970b59657e8556b07701a93c602))
+
 ## [1.13.2](https://github.com/RedFroggy/company-id-validator/compare/v1.13.1...v1.13.2) (2021-11-18)
 
 
