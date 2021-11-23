@@ -9,3 +9,5 @@ export {GbCompanyIdService} from './gb/gb-company-id.service';
 export {ScCompanyIdService} from './sc/sc-company-id.service';
 export {NiCompanyIdService} from './ni/ni-company-id.service';
 export {DeCompanyIdService} from './de/de-company-id.service';
+export {NoCompanyIdService} from './no/no-company-id.service';
+export {SeCompanyIdService} from './se/se-company-id.service';

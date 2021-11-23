@@ -59,8 +59,9 @@ console.log(info);
   "type": "LOCAL_COMPANY_ID",
   "description": "The SIREN (Système d'Identification du Répertoire des Entreprises) is a 9\ndigit number used to identify French companies. The Luhn checksum is used\nto validate the numbers.",
   "trustedSourceUrl": "https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_entreprises",
-  "pattern": "^\\d{9}$",
+  "pattern": "^[0-9]{3}[ \\.\\-]?[0-9]{3}[ \\.\\-]?[0-9]{3}$",
   "parentLevel": true,
+  "countryName": "France",
   "id": "802070748",
   "vatNumber": "FR89802070748"
 }
@@ -84,5 +85,5 @@ console.log(info);
 `npm run lint`. Will check your code based on `tslint.json` config file
 
 ## Roadmap
-- For now 7 countries are supported: FR, BE, CH, AD, CN, IT, ES
+- For now 14 countries are supported: AD, BE, CH, CN, DE, ES, FR, GB, IT, NI, NO, PL, SC, SE
 - Need to add many more countries based on the [ptdnum python library](https://github.com/arthurdejong/python-stdnum)
