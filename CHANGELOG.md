@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/RedFroggy/company-id-validator/compare/v1.14.0...v1.15.0) (2021-11-25)
+
+
+### Features
+
+* add japan company id support ([6583d4a](https://github.com/RedFroggy/company-id-validator/commit/6583d4a5a66f5576fa0062e64df70300d940a25b))
+
 # [1.14.0](https://github.com/RedFroggy/company-id-validator/compare/v1.13.2...v1.14.0) (2021-11-23)
 
 
