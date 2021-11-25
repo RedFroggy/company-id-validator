@@ -11,3 +11,4 @@ export {NiCompanyIdService} from './ni/ni-company-id.service';
 export {DeCompanyIdService} from './de/de-company-id.service';
 export {NoCompanyIdService} from './no/no-company-id.service';
 export {SeCompanyIdService} from './se/se-company-id.service';
+export {JpCompanyIdService} from './jp/jp-company-id.service';

@@ -85,5 +85,5 @@ console.log(info);
 `npm run lint`. Will check your code based on `tslint.json` config file
 
 ## Roadmap
-- For now 14 countries are supported: AD, BE, CH, CN, DE, ES, FR, GB, IT, NI, NO, PL, SC, SE
+- For now 15 countries are supported: AD, BE, CH, CN, DE, ES, FR, GB, IT, NI, NO, PL, SC, SE, JP
 - Need to add many more countries based on the [ptdnum python library](https://github.com/arthurdejong/python-stdnum)
