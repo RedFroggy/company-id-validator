@@ -62,7 +62,7 @@
     "gh-pages": "3.2.3",
     "glob": "7.2.0",
     "husky": "7.0.2",
-    "is-ci": "3.0.0",
+    "is-ci": "3.0.1",
     "jasmine-core": "3.10.1",
     "jasmine-spec-reporter": "7.0.0",
     "jest": "27.3.1",
