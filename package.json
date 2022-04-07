@@ -41,7 +41,7 @@
     "node": ">=10"
   },
   "dependencies": {
-    "i18n-iso-countries": "7.0.0"
+    "i18n-iso-countries": "7.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "13.2.1",
