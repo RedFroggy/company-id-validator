@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/RedFroggy/company-id-validator/compare/v1.15.0...v1.16.0) (2022-04-07)
+
+
+### Features
+
+* upgrade dependencies ([4e84ee7](https://github.com/RedFroggy/company-id-validator/commit/4e84ee71037e95fc8b6d14c405c334814f42c619))
+
 # [1.15.0](https://github.com/RedFroggy/company-id-validator/compare/v1.14.0...v1.15.0) (2021-11-25)
 
 
