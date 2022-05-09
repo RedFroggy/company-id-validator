@@ -1,8 +1,6 @@
 import {CompanyIdService} from "../company-id.service";
-import {Injectable} from "../../injectable.decorator";
 import {COMPANY_CN_DATA} from "./cn.model";
 
-@Injectable
 export class CnCompanyIdService extends CompanyIdService {
 
   constructor() {

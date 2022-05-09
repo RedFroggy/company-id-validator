@@ -1,11 +1,9 @@
 import {CompanyIdInfoModel} from "../../../types/company-id-info.model";
 import {CompanyIdType} from "../../../types/company-id-type";
-import {Injectable} from "../../injectable.decorator";
 import {CompanyIdService} from "../company-id.service";
 import {LuhnUtils} from "../utils/luhn.utils";
 import {COMPANY_SE_DATA} from "./se.model";
 
-@Injectable
 export class SeCompanyIdService extends CompanyIdService {
   constructor() {
     super('SE', COMPANY_SE_DATA);

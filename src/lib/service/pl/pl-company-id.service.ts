@@ -1,10 +1,8 @@
 import {CompanyIdInfoModel} from "../../../types/company-id-info.model";
 import {CompanyIdType} from "../../../types/company-id-type";
-import {Injectable} from "../../injectable.decorator";
 import {CompanyIdService} from "../company-id.service";
 import {COMPANY_PL_DATA} from "./pl.model";
 
-@Injectable
 export class PlCompanyIdService extends CompanyIdService {
   constructor() {
     super('PL', COMPANY_PL_DATA);

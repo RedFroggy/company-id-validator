@@ -1,6 +1,5 @@
 import {CompanyIdInfoModel} from "../../../types/company-id-info.model";
 import {CompanyIdType} from "../../../types/company-id-type";
-import {Injectable} from "../../injectable.decorator";
 import {CompanyIdService} from "../company-id.service";
 import {Iso7064Utils} from "../utils/iso-7064.utils";
 import {COMPANY_DE_DATA} from "./de.model";
@@ -15,7 +14,6 @@ const FORMATS = [
   COURT_REGEXP + ',?\\s?' + REGISTRY_REGEXP + '\\s?' + NUMBER_REGEXP + '$',
 ]
 
-@Injectable
 export class DeCompanyIdService extends CompanyIdService {
   constructor() {
     super('DE', COMPANY_DE_DATA);

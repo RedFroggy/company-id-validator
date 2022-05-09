@@ -1,6 +1,5 @@
 import {CompanyIdType} from "../types/company-id-type";
 import {CompanyId} from './company-id';
-import './service';
 
 describe('Company validation tests', () => {
   it('should validate', () => {

@@ -1,9 +1,7 @@
 import {CompanyIdInfoModel} from "../../../types/company-id-info.model";
-import {Injectable} from "../../injectable.decorator";
 import {GbCompanyIdService} from "../gb/gb-company-id.service";
 import {COMPANY_NI_DATA} from "./ni.model";
 
-@Injectable
 export class NiCompanyIdService extends GbCompanyIdService {
 
   constructor() {

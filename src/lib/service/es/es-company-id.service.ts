@@ -1,9 +1,7 @@
 import {COMPANY_ES_DATA} from "./es.model";
 import {CompanyIdInfoModel} from "../../../types/company-id-info.model";
 import {CompanyIdService} from "../company-id.service";
-import {Injectable} from "../../injectable.decorator";
 
-@Injectable
 export class EsCompanyIdService extends CompanyIdService {
 
   constructor() {

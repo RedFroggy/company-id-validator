@@ -1,7 +1,6 @@
 import {CompanyIdType} from "../../../types/company-id-type";
 import {CompanyIdInfoModel} from "../../../types/company-id-info.model";
 import {CompanyIdService} from "../company-id.service";
-import {Injectable} from "../../injectable.decorator";
 import {LuhnUtils} from "../utils/luhn.utils";
 import {COMPANY_FR_DATA} from "./fr.model";
 
@@ -10,7 +9,6 @@ import {COMPANY_FR_DATA} from "./fr.model";
  * You can use the INSEE webiste to manually validate french company identifiers
  * Please see {@link https://avis-situation-sirene.insee.fr/}
  */
-@Injectable
 export class FrCompanyIdService extends CompanyIdService {
   constructor() {
     super('FR', COMPANY_FR_DATA);
