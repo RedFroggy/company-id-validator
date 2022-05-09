@@ -1,3 +1,10 @@
+## [1.17.1](https://github.com/RedFroggy/company-id-validator/compare/v1.17.0...v1.17.1) (2022-05-09)
+
+
+### Bug Fixes
+
+* remove unecessary index file ([c7912fe](https://github.com/RedFroggy/company-id-validator/commit/c7912fea903ca7fc63be3f18a99eb1fa79ca44f0))
+
 # [1.17.0](https://github.com/RedFroggy/company-id-validator/compare/v1.16.0...v1.17.0) (2022-05-09)
 
 
