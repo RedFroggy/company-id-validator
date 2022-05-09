@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/RedFroggy/company-id-validator/compare/v1.16.0...v1.17.0) (2022-05-09)
+
+
+### Features
+
+* update injection of services ([8e97211](https://github.com/RedFroggy/company-id-validator/commit/8e972114f41ac512dc713a89635aa3aceca1c899))
+
 # [1.16.0](https://github.com/RedFroggy/company-id-validator/compare/v1.15.0...v1.16.0) (2022-04-07)
 
 
