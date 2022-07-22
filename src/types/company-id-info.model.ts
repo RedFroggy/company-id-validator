@@ -31,7 +31,7 @@ export interface CompanyIdInfoModel {
   // Trusted url where you can find info about the local company identifier
   trustedSourceUrl?: string;
   // Pattern used to identify
-  pattern?: string;
+  patterns?: string[];
   // True for a parent level company identifier
   parentLevel?: boolean;
   // Specific country properties

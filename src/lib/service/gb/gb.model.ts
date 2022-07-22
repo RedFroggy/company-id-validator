@@ -7,7 +7,7 @@ export const COMPANY_GB_DATA: CompanyIdInfoModel[] = [
     name: "VAT",
     type: CompanyIdType.VAT,
     parentLevel: true,
-    pattern: "^GB[ ]?[0-9]{3}[ ]?[0-9]{3}[ ]?[0-9]{3}$",
+    patterns: ["^GB[ ]?[0-9]{3}[ ]?[0-9]{3}[ ]?[0-9]{3}$"],
     description: "The VAT number can either be a 9-digit standard number, a 12-digit standard\n" +
       "number followed by a 3-digit branch identifier, a 5-digit number for\n" +
       "government departments (first two digits are GD) or a 5-digit number for\n" +
@@ -19,6 +19,6 @@ export const COMPANY_GB_DATA: CompanyIdInfoModel[] = [
     name: "CRN",
     type: CompanyIdType.LOCAL_COMPANY_ID,
     parentLevel: true,
-    pattern: "^GB[ ]?[0-9]{3}[ ]?[0-9]{3}[ ]?[0-9]{3}$",
+    patterns: ["^GB[ ]?[0-9]{3}[ ]?[0-9]{3}[ ]?[0-9]{3}$"],
   }
 ]

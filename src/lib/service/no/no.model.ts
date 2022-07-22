@@ -8,7 +8,7 @@ export const COMPANY_NO_DATA: CompanyIdInfoModel[] = [
     type: CompanyIdType.LOCAL_COMPANY_ID,
     description: "The Organisasjonsnummer is a 9-digit number",
     trustedSourceUrl: "https://no.wikipedia.org/wiki/Organisasjonsnummer",
-    pattern: "^[0-9]{3}[ \\.\\-]?[0-9]{3}[ \\.\\-]?[0-9]{3}$",
+    patterns: ["^[0-9]{3}[ \\.\\-]?[0-9]{3}[ \\.\\-]?[0-9]{3}$"],
     parentLevel: true
   },
   {
@@ -17,7 +17,7 @@ export const COMPANY_NO_DATA: CompanyIdInfoModel[] = [
     type: CompanyIdType.VAT,
     description: "The VAT number is the standard Norwegian organisation number\n" +
       "(Organisasjonsnummer) with 'MVA' as suffix.",
-    pattern: "^NO\\s?[0-9]{3}[ \\.\\-]?[0-9]{3}[ \\.\\-]?[0-9]{3}\\s?MVA$",
+    patterns: ["^NO\\s?[0-9]{3}[ \\.\\-]?[0-9]{3}[ \\.\\-]?[0-9]{3}\\s?MVA$"],
     parentLevel: true
   }
 ];

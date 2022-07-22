@@ -7,7 +7,7 @@ export const COMPANY_PL_DATA: CompanyIdInfoModel[] = [
     name: "NIP",
     type: CompanyIdType.VAT,
     parentLevel: true,
-    pattern: "^PL[ \\.\\-]?[0-9]{10}$",
+    patterns: ["^PL[ \\.\\-]?[0-9]{10}$"],
     description: "The NIP (Numer Identyfikacji Podatkowej) number consists of 10 digit"
   },
   {
@@ -15,7 +15,7 @@ export const COMPANY_PL_DATA: CompanyIdInfoModel[] = [
     name: "REGON",
     type: CompanyIdType.LOCAL_COMPANY_ID,
     parentLevel: true,
-    pattern: "^(\\d{10}|\\d{9}|\\d{14})$",
+    patterns: ["^(\\d{10}|\\d{9}|\\d{14})$"],
     trustedSourceUrl: "https://bip.stat.gov.pl/en/regon/",
     description: "The REGON (Rejestr Gospodarki Narodowej) is a statistical identification\n" +
       "number for businesses. National entities are assigned a 9-digit number, while\n" +

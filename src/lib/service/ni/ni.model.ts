@@ -7,13 +7,13 @@ export const COMPANY_NI_DATA: CompanyIdInfoModel[] = [
     name: "VAT",
     type: CompanyIdType.VAT,
     parentLevel: true,
-    pattern: "^XI[ ]?[0-9]{3}[ ]?[0-9]{3}[ ]?[0-9]{3}$",
+    patterns: ["^XI[ ]?[0-9]{3}[ ]?[0-9]{3}[ ]?[0-9]{3}$"],
   },
   {
     fullName: "Business Registration Number",
     name: "BRN",
     type: CompanyIdType.LOCAL_COMPANY_ID,
     parentLevel: true,
-    pattern: "^(NA|NZ|NF|GN|NL|NC|R0|NI|EN)[0-9]{6}$",
+    patterns: ["^(NA|NZ|NF|GN|NL|NC|R0|NI|EN)[0-9]{6}$"],
   }
 ]

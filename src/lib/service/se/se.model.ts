@@ -7,7 +7,7 @@ export const COMPANY_SE_DATA: CompanyIdInfoModel[] = [
     name: "Organisationsnummer",
     type: CompanyIdType.LOCAL_COMPANY_ID,
     parentLevel: true,
-    pattern: "^[0-9]{6}-?[0-9]{4}$",
+    patterns: ["^[0-9]{6}-?[0-9]{4}$"],
     description: "The Orgnr (Organisationsnummer) is the national number to identify Swedish\n" +
       "companies and consists of 10 digits. These are the first 10 digits in the\n" +
       "Swedish VAT number, i.e. it's the VAT number without the 'SE' in front and\n" +
@@ -18,7 +18,7 @@ export const COMPANY_SE_DATA: CompanyIdInfoModel[] = [
     name: "VAT number",
     type: CompanyIdType.VAT,
     parentLevel: true,
-    pattern: "^SE[ \\.\\-]?[0-9]{6}-?[0-9]{4}(01|02|03)$",
+    patterns: ["^SE[ \\.\\-]?[0-9]{6}-?[0-9]{4}(01|02|03)$"],
     description: "The Momsregistreringsnummer is used for VAT (Moms, Mervärdesskatt) purposes\n" +
       "and consists of 12 digits of which the last two should be 01. The first 10\n" +
       "digits should have a valid Luhn checksum."

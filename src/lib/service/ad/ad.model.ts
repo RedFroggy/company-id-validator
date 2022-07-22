@@ -8,7 +8,7 @@ export const COMPANY_AD_DATA: CompanyIdInfoModel[] = [
     type: CompanyIdType.LOCAL_COMPANY_ID,
     trustedSourceUrl: "https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/Andorra-TIN.pdf",
     parentLevel: true,
-    pattern: "^.{1}-?\\d{6}-?.{1}$",
+    patterns: ["^.{1}-?\\d{6}-?.{1}$"],
     description: "NRT (Número de Registre Tributari, Andorra tax number).\nThe Número de Registre Tributari (NRT) is an identifier of legal and natural\nentities for tax purposes.\nThis number consists of one letter indicating the type of entity, then 6\ndigits, followed by a check letter.\nMore information:\n* https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/Andorra-TIN.pdf"
   }
 ];
