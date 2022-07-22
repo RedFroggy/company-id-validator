@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/RedFroggy/company-id-validator/compare/v1.17.1...v1.18.0) (2022-07-22)
+
+
+### Features
+
+* support old siren format (7 and 8 size long) ([6e62178](https://github.com/RedFroggy/company-id-validator/commit/6e62178f8c68d8d6826d46fb868400f8675fe7a5))
+
 ## [1.17.1](https://github.com/RedFroggy/company-id-validator/compare/v1.17.0...v1.17.1) (2022-05-09)
 
 
