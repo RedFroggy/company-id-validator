@@ -11,6 +11,14 @@ describe('French company validation', () => {
     expect(companyIdService.validate("802070749")).toBeFalsy();
   });
 
+  it('should validate old format SIREN', () => {
+    expect(companyIdService.validate("5720784")).toBeTruthy();
+    expect(companyIdService.validate("5720785")).toBeFalsy();
+
+    expect(companyIdService.validate("15450752")).toBeTruthy();
+    expect(companyIdService.validate("15450753")).toBeFalsy();
+  });
+
   it('should validate VAT number', () => {
     expect(companyIdService.validate("FR89802070748", {type: CompanyIdType.VAT})).toBeTruthy();
   });

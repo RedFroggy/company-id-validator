@@ -7,6 +7,6 @@ export const COMPANY_SC_DATA: CompanyIdInfoModel[] = [
     name: "BRN",
     type: CompanyIdType.LOCAL_COMPANY_ID,
     parentLevel: true,
-    pattern: "^(SA|SZ|SF|GS|SL|SO|SC|ES)[0-9]{6}$"
+    patterns: ["^(SA|SZ|SF|GS|SL|SO|SC|ES)[0-9]{6}$"]
   }
 ];

@@ -8,7 +8,7 @@ export const COMPANY_JP_DATA: CompanyIdInfoModel[] = [
     type: CompanyIdType.LOCAL_COMPANY_ID,
     trustedSourceUrl: "https://en.wikipedia.org/wiki/Corporate_Number",
     parentLevel: true,
-    pattern: "^(?:[0-9]{1}-[0-9]{4}-[0-9]{4}-[0-9]{4}|[0-9]{13})$",
+    patterns: ["^(?:[0-9]{1}-[0-9]{4}-[0-9]{4}-[0-9]{4}|[0-9]{13})$"],
     description: "The Corporate Number is assigned by the Japanese National Tax Agency to\n" +
       "identify government organs, public entities, registered corporations and\n" +
       "other organisations. The number consists of 13 digits where the first digit\n" +

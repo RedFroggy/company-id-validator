@@ -64,7 +64,7 @@ describe('Company validation tests', () => {
       trustedSourceUrl: jasmine.anything(),
       name: 'SIREN',
       parentLevel: true,
-      pattern: jasmine.anything(),
+      patterns: [jasmine.anything(),jasmine.anything()],
       vatNumber: 'FR89802070748',
       type: CompanyIdType.LOCAL_COMPANY_ID
     });
