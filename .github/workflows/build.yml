@@ -49,4 +49,4 @@ jobs:
             path: dist
             key: company-id-validation-dist-${{ env.GITHUB_JOB }}
       -   name: Release
-          uses: RedFroggy/company-id-validator/.github/workflow/release.yml@main
+          uses: RedFroggy/company-id-validator/.github/workflows/release.yml@main
