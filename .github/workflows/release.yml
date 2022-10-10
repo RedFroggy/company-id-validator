@@ -17,6 +17,11 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Cache dist folder
+        uses: actions/cache@v3
+        with:
+          path: dist
+          key: company-id-validation-dist-${{ github.run_id }}
       - name: release
         run: |
           ls -ail
