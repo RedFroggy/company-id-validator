@@ -43,6 +43,7 @@ jobs:
           if: github.ref == 'refs/heads/main'
           run: |
             npm run build
+            cp package.json dist/main
       -   name: Cache dist folder
           uses: actions/cache@v2
           with:
