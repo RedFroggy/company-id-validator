@@ -32,6 +32,7 @@ module.exports = {
   ],
   globals: {
     'ts-jest': {
+      isolatedModules: true,
       tsconfig: '<rootDir>/tsconfig.json',
       stringifyContentPathRegex: '\\.html$',
     },
