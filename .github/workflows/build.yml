@@ -50,6 +50,11 @@ jobs:
           with:
             path: dist
             key: company-id-validation-dist-${{ github.run_id }}
+      -   name: Deploy to GitHub Pages
+          uses: JamesIves/github-pages-deploy-action@v4.4.0
+          with:
+            folder: docs
+
   release:
     uses: RedFroggy/company-id-validator/.github/workflows/release.yml@main
     secrets:
