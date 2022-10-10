@@ -8,11 +8,15 @@ on:
     branches: ['main']
   pull_request:
     branches: ['main']
-runs:
-  using: composite
-  steps:
-    - name: release
-      run: |
-        npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
-        cp package.json dist/main
-        npm run semantic-release
+
+jobs:
+  build:
+    name: Release
+    runs-on: ubuntu-20.04
+    steps:
+      - name: release
+        run: |
+          npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+          cp package.json dist/main
+          npm run semantic-release
+
