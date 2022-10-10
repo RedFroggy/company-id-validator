@@ -13,6 +13,8 @@ jobs:
     name: Release
     runs-on: ubuntu-20.04
     steps:
+      - name: Git checkout for source code analysis
+        uses: actions/checkout@v2
       - name: Cache Node.js modules
         uses: actions/cache@v2
         with:
@@ -26,5 +28,6 @@ jobs:
       - name: release
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+          cp package.json dist/main
           npm run semantic-release
 
