@@ -50,11 +50,13 @@ jobs:
           with:
             path: dist
             key: company-id-validation-dist-${{ github.run_id }}
+
       -   name: Deploy to GitHub Pages
-          uses: peaceiris/actions-gh-pages@v3
+          uses: JamesIves/github-pages-deploy-action@3.7.1
           with:
-            github_token: ${{ secrets.GH_TOKEN }}
-            publish_dir: ./docs
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: docs/
 
   release:
     uses: RedFroggy/company-id-validator/.github/workflows/release.yml@main
