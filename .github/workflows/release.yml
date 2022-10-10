@@ -5,6 +5,11 @@ permissions:
   pull-requests: write
 on:
   workflow_call:
+    secrets:
+      GH_TOKEN:
+        required: true
+      NPM_TOKEN:
+        required: true
 
 jobs:
   release:
@@ -31,9 +36,6 @@ jobs:
           key: company-id-validation-dist-${{ github.run_id }}
 
       - name: release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           ls -ail
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"

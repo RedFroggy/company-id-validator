@@ -52,7 +52,7 @@ jobs:
             key: company-id-validation-dist-${{ github.run_id }}
   release:
     uses: RedFroggy/company-id-validator/.github/workflows/release.yml@main
-    env:
+    secrets:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     needs: build
