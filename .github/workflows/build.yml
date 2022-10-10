@@ -40,7 +40,6 @@ jobs:
           run: |
             npm run lint
             npm run test:ci
-            npm run doc
       -   name: Build
           if: github.ref == 'refs/heads/main'
           run: |
@@ -50,13 +49,6 @@ jobs:
           with:
             path: dist
             key: company-id-validation-dist-${{ github.run_id }}
-
-      -   name: Deploy to GitHub Pages
-          uses: JamesIves/github-pages-deploy-action@3.7.1
-          with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BRANCH: gh-pages
-            FOLDER: docs/
 
   release:
     uses: RedFroggy/company-id-validator/.github/workflows/release.yml@main
