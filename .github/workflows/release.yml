@@ -17,8 +17,12 @@ jobs:
       - name: Cache Node.js modules
         uses: actions/cache@v3
         with:
-          path: node_modules
+          path: ~/.npm
           key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install Dependencies
+        run: |
+          npm ci
 
       - name: Cache dist folder
         uses: actions/cache@v3
