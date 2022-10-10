@@ -1,0 +1,10 @@
+name: release
+description: Run semantic release
+runs:
+  using: composite
+  steps:
+    - name: release
+      run: |
+        npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+        cp package.json dist/main
+        npm run semantic-release
