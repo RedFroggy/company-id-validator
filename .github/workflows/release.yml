@@ -30,6 +30,8 @@ jobs:
           key: company-id-validation-dist-${{ github.run_id }}
 
       - name: release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           ls -ail
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
