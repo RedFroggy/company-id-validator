@@ -53,6 +53,6 @@ jobs:
   release:
     uses: RedFroggy/company-id-validator/.github/workflows/release.yml@main
     secrets:
-      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     needs: build
