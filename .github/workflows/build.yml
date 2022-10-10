@@ -33,8 +33,12 @@ jobs:
       -   name: Cache Node.js modules
           uses: actions/cache@v2
           with:
-            path: ~/.npm
+            path: node_modules
             key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: |
+              ${{ runner.os }}-build-${{ env.cache-name }}-
+              ${{ runner.os }}-build-
+              ${{ runner.os }}-
 
       -   name: Run unit tests
           run: |
