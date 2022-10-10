@@ -47,9 +47,6 @@ jobs:
           uses: actions/cache@v2
           with:
             path: dist
-            key: company-id-validation-dist-${{ hashFiles('dist/**') }}
+            key: company-id-validation-dist-${{ env.GITHUB_JOB }}
       -   name: Release
           uses: ./.github/workflow/release
-          with:
-            path: dist
-            key: company-id-validation-dist-${{ hashFiles('dist/**') }}
