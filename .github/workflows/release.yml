@@ -21,7 +21,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: dist
-          key: company-id-validation-dist-${{ env.GITHUB_JOB }}
+          key: company-id-validation-dist-${{ env.GITHUB_RUN_ID }}
       - name: release
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
