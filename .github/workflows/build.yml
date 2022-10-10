@@ -40,6 +40,7 @@ jobs:
           run: |
             npm run lint
             npm run test:ci
+            npm run doc
       -   name: Build
           if: github.ref == 'refs/heads/main'
           run: |
