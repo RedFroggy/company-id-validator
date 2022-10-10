@@ -26,5 +26,5 @@ jobs:
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
           cp package.json dist/main
-          npm run semantic-release
+          npm run release
 
