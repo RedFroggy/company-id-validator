@@ -12,18 +12,23 @@ jobs:
     steps:
       - name: Git checkout for source code analysis
         uses: actions/checkout@v3
+
       - name: Cache Node.js modules
         uses: actions/cache@v3
         with:
-          path: |
-            ~/.npm
-            **/node_modules
+          path: ~/.npm
           key: ${{ runner.OS }}-node1-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install Dependencies
+        run: |
+          npm ci
+
       - name: Cache dist folder
         uses: actions/cache@v3
         with:
           path: dist
           key: company-id-validation-dist-${{ github.run_id }}
+
       - name: release
         run: |
           ls -ail
