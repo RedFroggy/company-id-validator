@@ -47,7 +47,7 @@ jobs:
           uses: actions/cache@v2
           with:
             path: dist
-            key: company-id-validation-dist-${{ hashFiles('dist/**') }}
+            key: company-id-validation-dist-${{ github.run_id }}
   release:
     uses: RedFroggy/company-id-validator/.github/workflows/release.yml@main
     needs: build
