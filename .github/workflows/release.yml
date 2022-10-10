@@ -24,6 +24,7 @@ jobs:
           key: company-id-validation-dist-${{ github.run_id }}
       - name: release
         run: |
+          ls -ail
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
           cp package.json dist/main
           npm run release
