@@ -37,12 +37,13 @@ jobs:
           architecture: x64
       - name: Generate docs
         run: |
+          cd demo
           npm ci
-          npm run doc
+          npm build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: 'docs'
+          path: 'demo/dist/demo'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Company id validator demo</title>
+</head>
+<body class="bg-light">
+  <div class="container">
+    <form class="card p-2 mt-3">
+      <div class="input-group">
+        <div class="col-md-3">
+          <select class="custom-select d-block w-100" id="countryCode">
+            <option value="AD">Andorra</option>
+            <option value="BE">Belgium</option>
+            <option value="CH">Switzerland</option>
+            <option value="CN">China</option>
+            <option value="DE">Germany</option>
+            <option value="ES">Spain</option>
+            <option value="FR" selected>France</option>
+            <option value="GB">Great Britain</option>
+            <option value="IT">Italia</option>
+            <option value="JP">Japan</option>
+            <option value="NI">Nicaragua</option>
+            <option value="NO">Norway</option>
+            <option value="PL">Poland</option>
+            <option value="SC">Scotland</option>
+            <option value="SE">Sweden</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" value="802070748" id="organizationId" placeholder="Company identifier (ex: siren, Handelsregisternummer, etc...)" required>
+          <div class="invalid-feedback">
+            Please select a valid country.
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-group-append">
+            <button type="button" id="validateBtn" class="btn btn-secondary">Validate</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="my-3 p-3 bg-white rounded box-shadow" id="company-container" style="display: none">
+      <div style="display: flex; justify-content: space-between" class="pr-2 border-bottom border-gray">
+        <h6 class="pb-2 mb-0">Company id information</h6>
+        <button type="button" class="btn btn-success btn-sm mb-2" id="valid" style="display: none">Valid</button>
+        <button type="button" class="btn btn-danger btn-sm mb-2" id="invalid" style="display: none">Invalid</button>
+      </div>
+      <div class="media text-muted pt-3">
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-block text-gray-dark">Country</strong>
+          <span id="country"></span>
+        </p>
+      </div>
+      <div class="media text-muted pt-3">
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-block text-gray-dark">National id</strong>
+          <span id="companyId"></span>
+        </p>
+      </div>
+      <div class="media text-muted pt-3">
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-block text-gray-dark">Identifier name</strong>
+          <span id="idName"></span>
+        </p>
+      </div>
+      <div class="media text-muted pt-3">
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-block text-gray-dark">Vat Number</strong>
+          <span id="vatNumber"></span>
+        </p>
+      </div>
+      <div class="media text-muted pt-3">
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-block text-gray-dark">Is parent identifier ?</strong>
+          <button type="button" class="btn btn-info btn-sm mb-2" id="parentIdentifier"></button>
+        </p>
+      </div>
+      <div class="media text-muted pt-3">
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-block text-gray-dark">Description</strong>
+          <span id="description"></span>
+        </p>
+      </div>
+      <div class="media text-muted pt-3">
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-block text-gray-dark">Source Url</strong>
+          <a id="sourceUrl" target="_blank"></a>
+        </p>
+      </div>
+      <div class="media text-muted pt-3">
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-block text-gray-dark">Patterns</strong>
+          <span id="patterns"></span>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="bundle.js"></script>
+</html>
