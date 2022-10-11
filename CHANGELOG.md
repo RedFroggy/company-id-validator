@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/RedFroggy/company-id-validator/compare/v1.18.2...v1.19.0) (2022-10-11)
+
+
+### Features
+
+* generate lib for both browser and node env ([899a6a0](https://github.com/RedFroggy/company-id-validator/commit/899a6a015147f12836c56c30aa2bbb278c489722))
+
 ## [1.18.2](https://github.com/RedFroggy/company-id-validator/compare/v1.18.1...v1.18.2) (2022-10-10)
 
 ## [1.18.1](https://github.com/RedFroggy/company-id-validator/compare/v1.18.0...v1.18.1) (2022-10-10)
