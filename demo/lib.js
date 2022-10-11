@@ -4,7 +4,6 @@ document.getElementById('validateBtn').addEventListener('click', (event) => {
   const countryCode = document.getElementById('countryCode').value;
   const organizationId = document.getElementById('organizationId').value;
   const companyInfo = CompanyId.info(countryCode, organizationId);
-  console.log(companyInfo);
 
   document.getElementById('company-container').style.display = 'block';
   if (companyInfo.valid) {

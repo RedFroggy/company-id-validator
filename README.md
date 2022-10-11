@@ -30,7 +30,7 @@ It's inspired from this awesome [ptdnum python library](https://github.com/arthu
 
 ## Demo
 
-You can find a [demo here](https://stackblitz.com/edit/angular-ivy-8ttp8f)
+You can find a [demo here](https://redfroggy.github.io/company-id-validator/)
 
 ## How to use it
 - `npm install company-id-validator --save`
