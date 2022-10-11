@@ -24,7 +24,7 @@
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
     ["@semantic-release/npm", {
-      "pkgRoot": "dist/main",
+      "pkgRoot": "dist/module",
      }],
      ["@semantic-release/git", {
         "assets": ["package.json", "CHANGELOG.md", "README.md"],
