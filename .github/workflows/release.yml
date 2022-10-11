@@ -42,5 +42,6 @@ jobs:
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
           cp package.json dist/main
+          cp package.json dist/module
           npm run release
 
