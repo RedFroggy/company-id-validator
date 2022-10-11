@@ -15,6 +15,7 @@ document.getElementById('validateBtn').addEventListener('click', (event) => {
   }
 
   document.getElementById('companyId').innerText = organizationId;
+  document.getElementById('parentNationalId').innerText = companyInfo.parentId || '';
   document.getElementById('country').innerText = `${companyInfo.countryCode} - ${companyInfo.countryName || ''}`;
   document.getElementById('idName').innerText = `${companyInfo.name || ''} - ${companyInfo.fullName || ''}`;
   document.getElementById('vatNumber').innerText = companyInfo.vatNumber || '';

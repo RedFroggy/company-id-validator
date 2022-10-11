@@ -12,8 +12,9 @@ on:
 
 jobs:
   pages:
+    name: Deploy demo
     environment:
-      name: github-pages
+      name: Demo pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
