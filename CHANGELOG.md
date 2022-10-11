@@ -1,3 +1,11 @@
+# [1.21.0](https://github.com/RedFroggy/company-id-validator/compare/v1.20.0...v1.21.0) (2022-10-11)
+
+
+### Features
+
+* add html demo ([899269c](https://github.com/RedFroggy/company-id-validator/commit/899269cacdb29b9d59887a1da18174fc5ced83ee))
+* add html demo ([1c441cf](https://github.com/RedFroggy/company-id-validator/commit/1c441cf3bd38cb054ec9159665f6720920aab867))
+
 # [1.20.0](https://github.com/RedFroggy/company-id-validator/compare/v1.19.0...v1.20.0) (2022-10-11)
 
 
