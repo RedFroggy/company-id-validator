@@ -58,7 +58,7 @@
     "eslint-config-prettier": "7.2.0",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-functional": "4.4.1",
-    "gh-pages": "3.2.3",
+    "gh-pages": "4.0.0",
     "glob": "7.2.3",
     "husky": "7.0.4",
     "is-ci": "3.0.1",
