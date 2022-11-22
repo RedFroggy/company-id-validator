@@ -7,7 +7,7 @@
     "build": "rm -rf dist && webpack && cp index.html .nojekyll dist/demo"
   },
   "dependencies": {
-    "company-id-validator": "1.21.0"
+    "company-id-validator": "1.21.2"
   },
   "devDependencies": {
     "webpack": "5.74.0",

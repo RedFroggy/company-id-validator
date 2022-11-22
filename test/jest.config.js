@@ -17,6 +17,7 @@ module.exports = {
       lines: 100,
     },
   },
+  coverageReporters: ['json-summary'],
   setupFilesAfterEnv: ['<rootDir>/test/setup-jest.ts'],
   reporters: [
     'default',
@@ -32,7 +33,6 @@ module.exports = {
   ],
   globals: {
     'ts-jest': {
-      isolatedModules: true,
       tsconfig: '<rootDir>/tsconfig.json',
       stringifyContentPathRegex: '\\.html$',
     },
