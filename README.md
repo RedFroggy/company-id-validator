@@ -87,7 +87,7 @@ console.log(info);
 
 ## Code quality
 
-`npm run lint`. Will check your code based on `tslint.json` config file
+`npm run lint`. Will check your code based on `.eslintrc.json` config file
 
 ## Roadmap
 - For now 15 countries are supported: AD, BE, CH, CN, DE, ES, FR, GB, IT, NI, NO, PL, SC, SE, JP
