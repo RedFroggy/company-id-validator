@@ -60,7 +60,7 @@
     "eslint-plugin-functional": "4.4.1",
     "gh-pages": "3.2.3",
     "glob": "7.2.3",
-    "husky": "7.0.4",
+    "husky": "8.0.3",
     "is-ci": "3.0.1",
     "istanbul-badges-readme": "1.8.2",
     "jasmine-core": "3.99.1",
