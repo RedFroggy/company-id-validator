@@ -62,7 +62,7 @@
     "glob": "8.1.0",
     "husky": "8.0.3",
     "is-ci": "3.0.1",
-    "istanbul-badges-readme": "1.8.2",
+    "istanbul-badges-readme": "1.8.4",
     "jasmine-core": "4.5.0",
     "jasmine-spec-reporter": "7.0.0",
     "jest": "27.5.1",
