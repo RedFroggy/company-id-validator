@@ -3,6 +3,7 @@
  * Please see {@link https://en.wikipedia.org/wiki/Luhn_algorithm}
  */
 export class LuhnUtils {
+
   static validate(value: string): boolean {
     const len = value.length
     const parity = len % 2

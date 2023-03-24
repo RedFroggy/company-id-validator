@@ -1,5 +1,7 @@
 import {CompanyIdInfoModel} from "../types/company-id-info.model";
 import {AdCompanyIdService} from "./service/ad/ad-company-id.service";
+import {AlCompanyIdService} from "./service/al/al-company-id.service";
+import {AtCompanyIdService} from "./service/at/at-company-id.service";
 import {BeCompanyIdService} from "./service/be/be-company-id.service";
 import {ChCompanyIdService} from "./service/ch/ch-company-id.service";
 import {CnCompanyIdService} from "./service/cn/cn-company-id.service";
@@ -70,7 +72,13 @@ export class CompanyIdFactory {
       case 'SE':
         companyIdService = new SeCompanyIdService();
         break;
-      default:
+      case 'AL':
+        companyIdService = new AlCompanyIdService();
+        break;
+      case 'AT':
+        companyIdService = new AtCompanyIdService();
+        break;
+     default:
         throw new Error('Unsupported countryCode: ' + countryCode);
     }
 
