@@ -6,7 +6,7 @@ describe('CompanyIdFactory unit tests', () => {
   it('should create instance based on country code', () => {
 
     const countries = ['AD', 'BE', 'CH', 'CN', 'DE', 'ES', 'FR',
-      'GB', 'IT', 'JP', 'NI', 'NO', 'PL', 'SC', 'SE'];
+      'GB', 'IT', 'JP', 'NI', 'NO', 'PL', 'SC', 'SE', 'AL', 'AT'];
 
     jest.spyOn(CompanyIdService.prototype, 'info').mockReturnValue({});
 

@@ -13,6 +13,9 @@ describe('Austrian company validation', () => {
 
     expect(validationService.validate('AT U10223006', {type: CompanyIdType.VAT})).toBeTruthy();
     expect(validationService.validate('ATU10223007', {type: CompanyIdType.VAT})).toBeFalsy();
+    expect(validationService.validate('AT M10223006', {type: CompanyIdType.VAT})).toBeFalsy();
+    expect(validationService.validate('AT U10KK3006', {type: CompanyIdType.VAT})).toBeFalsy();
+    expect(validationService.validate('ATU10223007888', {type: CompanyIdType.VAT})).toBeFalsy();
   });
 
   it('should have info', () => {

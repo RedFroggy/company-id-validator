@@ -17,7 +17,7 @@ module.exports = {
       lines: 100,
     },
   },
-  coverageReporters: ['json-summary'],
+  coverageReporters: ['json', 'lcov', 'text'],
   setupFilesAfterEnv: ['<rootDir>/test/setup-jest.ts'],
   reporters: [
     'default',
