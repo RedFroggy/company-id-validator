@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/RedFroggy/company-id-validator/compare/v1.21.7...v1.22.0) (2023-03-24)
+
+
+### Features
+
+* add austria and albania company identifiers ([daad0a5](https://github.com/RedFroggy/company-id-validator/commit/daad0a52f6e52143b04cf83d5fc106fca123ebe8))
+
 ## [1.21.7](https://github.com/RedFroggy/company-id-validator/compare/v1.21.6...v1.21.7) (2023-02-01)
 
 ## [1.21.6](https://github.com/RedFroggy/company-id-validator/compare/v1.21.5...v1.21.6) (2023-02-01)
