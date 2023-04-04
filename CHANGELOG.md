@@ -1,3 +1,5 @@
+## [1.22.1](https://github.com/RedFroggy/company-id-validator/compare/v1.22.0...v1.22.1) (2023-04-04)
+
 # [1.22.0](https://github.com/RedFroggy/company-id-validator/compare/v1.21.7...v1.22.0) (2023-03-24)
 
 
