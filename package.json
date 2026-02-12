@@ -63,7 +63,7 @@
     "husky": "8.0.3",
     "is-ci": "3.0.1",
     "istanbul-badges-readme": "1.8.5",
-    "jasmine-core": "4.6.0",
+    "jasmine-core": "4.6.1",
     "jasmine-spec-reporter": "7.0.0",
     "jest": "27.5.1",
     "jest-html-reporter": "3.10.2",
